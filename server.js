@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost/pager');
 app.set('env', 'dev');
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public'));
 app.engine('html', consolidate.ejs);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
@@ -31,14 +31,14 @@ app.get('/', function(req, res) {
 
 
 //- POST-ROUTES
-app.use(function(err, req, res, next){ //error catcher
-	console.error(err.stack.toString().red);
+app.use(function(err, req, res, next) {
+	console.error(err.stack.toString());
 	res.status(500).send(err.message);
 });
 
 
-var server = app.listen(process.env.port, function(){
-		console.log('Listening at http://%s:%s',
-			server.address().address,
-			server.address().port);
+// var server = app.listen(process.env.port, function() {
+var server = app.listen(3000, function() {
+  console.log('Listening on port: %s',
+  	server.address().port);
 });

@@ -1,4 +1,7 @@
 data/
+public/
+node_modules/
+bower_components/
 access.log
 .DS_Store
 **/**/.DS_Store
