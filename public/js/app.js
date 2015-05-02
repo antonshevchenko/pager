@@ -18,6 +18,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
       views: {
         'header': {
           templateUrl: '/public/views/header.html',
+          controller: 'HeaderCtrl'
         },
         'content': {
           templateUrl: '/public/views/index.html'
@@ -30,9 +31,11 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
 
     .state('app.pages', {
       url: '/pages',
+      title: 'Pages',
       views: {
         'header': {
           templateUrl: '/public/views/header.html',
+          controller: 'HeaderCtrl'
         },
         'content': {
           templateUrl: '/public/views/pages.html',
@@ -46,9 +49,11 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
 
     .state('app.pages.edit', {
       url: '/:id',
+      title: 'Edit Page',
       views: {
         'header': {
           templateUrl: '/public/views/header.html',
+          controller: 'HeaderCtrl'
         },
         'content': {
           templateUrl: '/public/views/edit.html',

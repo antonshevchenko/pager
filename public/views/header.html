@@ -1,4 +1,4 @@
-<div class="header" ng-controller="HeaderController">
+<div class="header">
 	<nav class="navbar">
 	  <div class="container">
 
@@ -9,7 +9,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Pager</a>
+	      <a class="navbar-brand" ui-sref="app.main">Pager</a><span class="navbar-brand text-gray" ng-show="view">/ {{view}}</span>
 	    </div>
 
 	    <div class="collapse navbar-collapse">
@@ -17,7 +17,7 @@
 	       {{user}}
 	       <li class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown">
-					<img src="{{image}}" alt=""><span class="caret"></span>
+					<img class="navbar-image" src="{{image}}" alt=""><span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu">
 					<li><a ui-sref="/">Logout</a></li>
@@ -25,7 +25,7 @@
 			</li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
-	    
+
 	  </div><!-- /.container -->
 	</nav>
 </div>
