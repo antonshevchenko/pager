@@ -1,31 +1,32 @@
 <div class="header">
 	<nav class="navbar">
-	  <div class="container">
+		<div class="container">
 
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" ui-sref="app.main">Pager</a><span class="navbar-brand text-gray" ng-show="view">/ {{view}}</span>
-	    </div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="app.main">Pager</a>
+				<span class="navbar-brand text-gray" ng-show="view">/ {{view}}</span>
+			</div>
 
-	    <div class="collapse navbar-collapse">
-	      <ul class="nav navbar-nav navbar-right">
-	       {{user}}
-	       <li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown">
-					<img class="navbar-image" src="{{image}}" alt=""><span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a ui-sref="/">Logout</a></li>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					{{user}}
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">
+							<img class="navbar-image" src="{{image}}" alt=""><span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a ui-sref="/">Logout</a></li>
+						</ul>
+					</li>
 				</ul>
-			</li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
+			</div>
 
-	  </div><!-- /.container -->
+		</div>
 	</nav>
 </div>
