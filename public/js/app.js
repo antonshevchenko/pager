@@ -24,9 +24,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
           templateUrl: '/public/views/landing.html',
           controller: 'LandingCtrl'
         },
-        'footer': {
-          templateUrl: '/public/views/footer.html'
-        }
       }
     })
 
@@ -42,9 +39,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
           templateUrl: '/public/views/pages.html',
           controller: 'PagesCtrl'
         },
-        'footer': {
-          templateUrl: '/public/views/footer.html'
-        }
       }
     })
 
@@ -60,9 +54,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
           templateUrl: '/public/views/edit.html',
           controller: 'EditCtrl'
         },
-        'footer': {
-          templateUrl: '/public/views/footer.html'
-        }
       }
     });
 
