@@ -16,14 +16,9 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
     .state('app.main', {
       url: '/',
       views: {
-        'header': {
-          templateUrl: '/public/views/header.html',
-        },
         'content': {
-          templateUrl: '/public/views/index.html'
-        },
-        'footer': {
-          templateUrl: '/public/views/footer.html'
+          templateUrl: '/public/views/landing.html',
+          controller: 'LandingCtrl'
         }
       }
     })

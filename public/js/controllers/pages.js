@@ -2,7 +2,7 @@ angular.module('pager')
 
 .controller('PagesCtrl', function($scope, $state) {
   $scope.pages = [
-    { id: 123, title: 'Hannah Montana', image: 'http://images.livemixtapes.com/artists/blaze/migo_lingo/cover.jpg', likes: 480, checkins: 1245 }
+    { }
   ];
 
   $scope.editPage = function(page) {
