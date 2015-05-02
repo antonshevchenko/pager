@@ -21,7 +21,8 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
           controller: 'HeaderCtrl'
         },
         'content': {
-          templateUrl: '/public/views/index.html'
+          templateUrl: '/public/views/landing.html',
+          controller: 'LandingCtrl'
         },
         'footer': {
           templateUrl: '/public/views/footer.html'
