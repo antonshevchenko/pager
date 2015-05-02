@@ -4,7 +4,8 @@
   "description": "Facebook Pages meets the web",
   "main": "server.js",
   "scripts": {
-    "preinstall": "npm install -g nodemon"
+    "preinstall": "npm install -g nodemon",
+    "start": "mkdir -p ./data/db | mongod --dbpath ./data/db | nodemon server"
   },
   "repository": {
     "type": "git",

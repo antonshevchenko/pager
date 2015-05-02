@@ -11,7 +11,6 @@
 2. Run the app
 
   ```bash
-  $ mkdir -p ./data/db
-  $ mongod --dbpath ./data/db
-  $ nodemon server.js
+  $ gulp
+  $ npm start
   ```
