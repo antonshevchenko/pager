@@ -24,16 +24,9 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 
-//- ROUTES
-app.get('/', function(req, res) {
+//- ROUTE
+app.use(function(req, res) {
   res.render('index');
-});
-
-
-//- POST-ROUTES
-app.use(function(err, req, res, next) {
-	console.error(err.stack.toString());
-	res.status(500).send(err.message);
 });
 
 

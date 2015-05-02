@@ -1,5 +1,4 @@
 data/
-public/
 node_modules/
 bower_components/
 access.log

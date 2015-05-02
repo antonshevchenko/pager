@@ -1,0 +1,15 @@
+.pager-item {
+  padding: $padding;
+  border: 1px solid $pager-gray;
+
+  .pager-item-image-container {
+    text-align: center;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px $padding $pager-gray;
+  }
+}

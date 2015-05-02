@@ -1,11 +1,19 @@
 <html>
   <head>
     <title>Hello World!</title>
-    <link href='/public/css/app.min.css' rel='stylesheet' type='text/css'/>
+
+    <!-- styles -->
+    <link href='public/vendor/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app='pager'>
     <div ui-view></div>
-    <script src='/public/js/app.min.js'></script>
+
+    <!-- scripts -->
+    <script src='public/vendor/angular/angular.min.js'></script>
+    <script src='public/vendor/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script src='public/js/app.js'></script>
+    <script src='public/js/controllers/app.js'></script>
+    <script src='public/js/controllers/pages.js'></script>
   </body>
 </html>
