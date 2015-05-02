@@ -46,14 +46,14 @@ angular.module('pager', ['ui.router'])
     .state('app.pages.edit', {
       url: '/:id',
       views: {
-        'header@app': {
+        'header': {
           templateUrl: '/public/views/header.html',
         },
-        'content@app': {
+        'content': {
           templateUrl: '/public/views/edit.html',
           controller: 'EditCtrl'
         },
-        'footer@app': {
+        'footer': {
           templateUrl: '/public/views/footer.html'
         }
       }

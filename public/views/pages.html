@@ -1,12 +1,15 @@
 <div class="container">
 
-  <div class="pager-item" ng-repeat="page in pages" ng-click="editPage(page)">
-    <div>
+  <div class="pager-item" ng-repeat="page in pages" ng-click="editPage($index)">
+    <div class="pager-image">
       <img ng-src="{{page.image}}"/>
     </div>
-    <div>
-      <p class="pager-title">{{page.title}}</p>
-      <p>{{page.likes}} | {{page.checkins}}</p>
+    <div class="pager-header">
+      <p class="pager-title">{{page.title}} <img class="pager-checkmark" src="public/img/check.png"></p>
+      <p class="pager-subtitle"><i class="fa fa-thumbs-o-up"></i> {{page.likes | number}} likes | <i class="fa fa-map-marker"></i> {{page.checkins | number}} checkins</p>
+    </div>
+    <div class="pager-icon-right">
+      <i class="fa fa-angle-right"></i>
     </div>
   </div>
 
