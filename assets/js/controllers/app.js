@@ -1,5 +1,7 @@
 angular.module('pager')
 
-.controller('AppCtrl', function($scope) {
-  alert('Hello')
+.controller('PageController', function($scope) {
+  $scope.page = [
+    {"about": "About"}
+  ];
 });
