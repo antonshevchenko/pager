@@ -13,7 +13,7 @@ var paths = {
     './assets/scss/**/*.scss'
   ],
   css: [
-
+    './bower_components/bootstrap/dist/css/bootstrap.min.css',
   ],
   js: [
     './bower_components/angular/angular.min.js',
@@ -28,10 +28,7 @@ var paths = {
     // './public/fonts/**/*'
   ],
   copy: {
-    js: [
-        // './bower_components/tinymce/**',
-        // './bower_components/angular-cookies/angular-cookies.min.js.map'
-    ],
+    js: [],
     css: [],
     html: [
       './assets/views/**/*.html',

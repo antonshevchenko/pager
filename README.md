@@ -6,6 +6,7 @@
 
   ```bash
   $ npm install
+  $ bower install
   ```
 
 2. Run the app
