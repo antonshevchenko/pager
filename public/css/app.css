@@ -4,6 +4,19 @@
 /*
 * Colors
 */
+.header {
+  font-weight: 300;
+  outline: 0 !important; }
+  .header .navbar-brand {
+    font-size: 35px;
+    color: #000;
+    padding-top: 40px; }
+  .header .navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 22px; }
+
 body {
   font-family: 'Open Sans', sans-serif; }
 

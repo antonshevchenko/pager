@@ -1,3 +1,31 @@
-<nav>
+<div class="header" ng-controller="HeaderController">
+	<nav class="navbar">
+	  <div class="container">
 
-</nav>
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Pager</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav navbar-right">
+	       {{user}}
+	       <li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">
+					<img src="{{image}}" alt=""><span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a ui-sref="/">Logout</a></li>
+				</ul>
+			</li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	    
+	  </div><!-- /.container -->
+	</nav>
+</div>

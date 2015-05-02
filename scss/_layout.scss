@@ -1,0 +1,18 @@
+.header {
+	font-weight: 300;
+	outline: 0 !important;
+	
+	.navbar-brand {
+		  font-size: 35px;
+		  color: #000;		  
+		  padding-top: 40px;
+	}
+
+	.navbar-nav {
+		display: flex;
+		align-items: center;
+		font-size: 22px;
+		line-height: 22px;
+	}
+}
+

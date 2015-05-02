@@ -1,6 +1,7 @@
-angular.module('pager', ['ui.router'])
+angular.module('pager', ['ui.router', 'ui.bootstrap'])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+
   // $locationProvider.html5Mode({
   //   enabled: true,
   //   requireBase: false
