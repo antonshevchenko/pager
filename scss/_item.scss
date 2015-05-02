@@ -1,33 +1,52 @@
 .pager-item {
   display: flex;
   padding: $padding;
+  margin-bottom: $padding * 2;
   border: 1px solid $pager-gray;
   -webkit-align-items: center;
+  cursor: pointer;
 
-  > div:first-child {
+  transition: box-shadow 0.1s ease;
+
+  .pager-image {
     flex: 100px 0px;
     margin-right: $padding * 2;
+
+    > img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px $padding $pager-gray;
+    }
   }
 
-  > div:last-child {
+  .pager-header {
     flex: 1;
   }
 
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+  .pager-icon-right i {
+    font-size: 36px;
+    color: $pager-gray;
+  }
+
+  &:hover {
     box-shadow: 0px 0px $padding $pager-gray;
   }
 }
 
 .pager-title {
+  margin: 0;
   font-weight: $pager-font-weight;
   font-size: 36px;
 }
 
 .pager-subtitle {
+  margin: 0;
   font-weight: $pager-font-weight;
-  font-size: 22px;
-  color: gray; // change
+  font-size: 14px;
+  color: gray;
+}
+
+.pager-checkmark {
+  width: 25px;
 }

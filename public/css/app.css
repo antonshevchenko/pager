@@ -29,24 +29,37 @@ body {
 .pager-item {
   display: flex;
   padding: 15px;
+  margin-bottom: 30px;
   border: 1px solid #e6e6e6;
-  -webkit-align-items: center; }
-  .pager-item > div:first-child {
+  -webkit-align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease; }
+  .pager-item .pager-image {
     flex: 100px 0px;
     margin-right: 30px; }
-  .pager-item > div:last-child {
+    .pager-item .pager-image > img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 15px #e6e6e6; }
+  .pager-item .pager-header {
     flex: 1; }
-  .pager-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+  .pager-item .pager-icon-right i {
+    font-size: 36px;
+    color: #e6e6e6; }
+  .pager-item:hover {
     box-shadow: 0px 0px 15px #e6e6e6; }
 
 .pager-title {
+  margin: 0;
   font-weight: 300;
   font-size: 36px; }
 
 .pager-subtitle {
+  margin: 0;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 14px;
   color: gray; }
+
+.pager-checkmark {
+  width: 25px; }
