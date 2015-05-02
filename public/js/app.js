@@ -41,6 +41,22 @@ angular.module('pager', ['ui.router'])
           templateUrl: '/public/views/footer.html'
         }
       }
+    })
+
+    .state('app.pages-edit', {
+      url: '/pages/:id',
+      views: {
+        'header': {
+          templateUrl: '/public/views/header.html',
+        },
+        'content': {
+          templateUrl: '/public/views/edit.html',
+          controller: 'EditCtrl'
+        },
+        'footer': {
+          templateUrl: '/public/views/footer.html'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/');
