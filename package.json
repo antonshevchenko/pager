@@ -1,0 +1,32 @@
+{
+  "name": "pager",
+  "version": "0.0.1",
+  "description": "Facebook Pages meets the web",
+  "main": "server.js",
+  "scripts": {
+    "preinstall": "npm install -g nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonshevchenko/pager.git"
+  },
+  "keywords": [
+    "pager",
+    "facebook",
+    "pages"
+  ],
+  "author": "Anton Shevchenko, Darrel-Day Guerrero, Alexandru Ilea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antonshevchenko/pager/issues"
+  },
+  "homepage": "https://github.com/antonshevchenko/pager",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "consolidate": "^0.10.0",
+    "ejs": "^1.0.0",
+    "express": "^4.10.2",
+    "mongoose": "^4.0.0",
+    "morgan": "^1.5.1"
+  }
+}

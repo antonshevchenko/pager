@@ -1,0 +1,41 @@
+language: cpp
+
+# http://docs.travis-ci.com/user/multi-os/
+os:
+  - linux
+  - osx
+
+env:
+  matrix:
+   - NODE_VERSION="0.10.36"
+   - NODE_VERSION="0.12.0"
+   - NODE_VERSION="iojs-v1.2.0"
+  global:
+   - secure: nxPEbegqL+ckZ03BvGJSOlfcNuoJvj+rkLbBmmOEuTrk79lvY0+gjpmvWu4gGXMt89Vz+iAJB29ERaUdriKzlmYmebhWEdwQ/aayUv2sNA0eduvr4TALW2iLfLqryeE4449xnuEvz469AVWxO8xoX9KgmrwTLnkMR9SbQHxB6jU=
+   - secure: Fs0ilCVBL0DUMkd5vzLGL/5K364kLj1LpSKzwZpPvlU6Gx2jW+Zt59RfM1yOTCvrPWWNb+jc8jz8lbbPXAgUnYNmL54WkIjapr8yPIClw6AtNOSuPtL+zGVGT7FZEO7EntNuEtTer6Wj8IuWUT7myeAezKzNogYg7HyaO4JsoJc=
+   - secure: ovgkAH1h18pGmoYWN/2tWLF1lqaAK74eK1vnNFB5FMq3wTZYXpzM1W9nT3uqaDsNBUbs/groMcCDU/WBvfQtz9DcocVkuSCVgQ+6MaVVIuH7z7erfIe2sNdq0yhjT4KgBjTZcu6ccVSLjNNQwWctOiPuVgMOLacpN1PuPfs7KCk=
+
+before_install:
+- echo $NODE_VERSION
+# upgrade nvm
+- rm -rf ~/.nvm/ && git clone --depth 1 https://github.com/creationix/nvm.git ~/.nvm
+- source ~/.nvm/nvm.sh
+- nvm install $NODE_VERSION
+- nvm use $NODE_VERSION
+- node --version
+- npm --version
+- npm update -g npm
+- npm --version
+
+install:
+- npm install
+
+before_script:
+- npm test
+# test node-webkit usage
+- ./scripts/test-node-webkit.sh
+
+script:
+# test non-authenticated mode
+- unset node_pre_gyp_accessKeyId
+- npm test

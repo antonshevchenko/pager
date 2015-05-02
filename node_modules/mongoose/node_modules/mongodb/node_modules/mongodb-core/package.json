@@ -1,0 +1,63 @@
+{
+  "name": "mongodb-core",
+  "version": "1.1.21",
+  "description": "Core MongoDB driver functionality, no bells and whistles and meant for integration not end applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/runner.js -t functional"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/christkv/mongodb-core.git"
+  },
+  "keywords": [
+    "mongodb",
+    "core"
+  ],
+  "dependencies": {
+    "bson": "~0.3",
+    "mkdirp": "0.5.0",
+    "rimraf": "2.2.6",
+    "kerberos": "~0.0"
+  },
+  "devDependencies": {
+    "integra": "0.1.8",
+    "optimist": "latest",
+    "jsdoc": "3.3.0-alpha8",
+    "semver": "4.1.0",
+    "gleak": "0.5.0",
+    "mongodb-tools": "~1.0"
+  },
+  "optionalDependencies": {
+    "kerberos": "~0.0"
+  },
+  "author": {
+    "name": "Christian Kvalheim"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/christkv/mongodb-core/issues"
+  },
+  "homepage": "https://github.com/christkv/mongodb-core",
+  "gitHead": "ccf69eb3b9aa289909f70765bda53be7c8583949",
+  "_id": "mongodb-core@1.1.21",
+  "_shasum": "11c313f0474315e8a200c4dbb89b5fc6442c8f7c",
+  "_from": "mongodb-core@1.1.21",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "christkv",
+    "email": "christkv@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "christkv",
+      "email": "christkv@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "11c313f0474315e8a200c4dbb89b5fc6442c8f7c",
+    "tarball": "http://registry.npmjs.org/mongodb-core/-/mongodb-core-1.1.21.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/mongodb-core/-/mongodb-core-1.1.21.tgz"
+}
