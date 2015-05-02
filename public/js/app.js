@@ -1,15 +1,15 @@
 angular.module('pager', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: false
-  });
+  // $locationProvider.html5Mode({
+  //   enabled: true,
+  //   requireBase: false
+  // });
 
   $stateProvider
     .state('app', {
       abstract: true,
-      templateUrl: '/public/views/layout.html',
+      templateUrl: '/public/views/layout.html'
     })
 
     .state('app.main', {
@@ -43,17 +43,17 @@ angular.module('pager', ['ui.router'])
       }
     })
 
-    .state('app.pages-edit', {
-      url: '/pages/:id',
+    .state('app.pages.edit', {
+      url: '/:id',
       views: {
-        'header': {
+        'header@app': {
           templateUrl: '/public/views/header.html',
         },
-        'content': {
+        'content@app': {
           templateUrl: '/public/views/edit.html',
           controller: 'EditCtrl'
         },
-        'footer': {
+        'footer@app': {
           templateUrl: '/public/views/footer.html'
         }
       }

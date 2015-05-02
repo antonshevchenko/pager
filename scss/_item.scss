@@ -1,15 +1,33 @@
 .pager-item {
+  display: flex;
   padding: $padding;
   border: 1px solid $pager-gray;
+  -webkit-align-items: center;
 
-  .pager-item-image-container {
-    text-align: center;
+  > div:first-child {
+    flex: 100px 0px;
+    margin-right: $padding * 2;
+  }
+
+  > div:last-child {
+    flex: 1;
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     box-shadow: 0px 0px $padding $pager-gray;
   }
+}
+
+.pager-title {
+  font-weight: $pager-font-weight;
+  font-size: 36px;
+}
+
+.pager-subtitle {
+  font-weight: $pager-font-weight;
+  font-size: 22px;
+  color: gray; // change
 }
