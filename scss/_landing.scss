@@ -76,8 +76,33 @@
   color: white;
   background-color: #333 !important;
 
+  .col-md-4 {
+    color: #333;
+    background-color: white;
+
+    &:first-of-type {
+      border-bottom-left-radius: $padding;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: $padding;
+    }
+  }
+
+  .creator {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: $padding;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+
   &.section {
-    padding: $padding * 2 0;
+    padding-top: 0;
+    padding-bottom: $padding * 2;
+
   }
 }
 
