@@ -1,9 +1,23 @@
 angular.module('pager')
 
-.controller('SiteHeaderCtrl', function($scope) {
-
+.controller('SiteHeaderCtrl', function($scope, $state, $stateParams) {
 	$scope.site = "The TRAP";
+	
+ 	$scope.viewSite = function() { 
+    	$state.go('app.site', { id: $stateParams.id });
+	};
+	
+ 	$scope.viewBlog = function() { 
+    	$state.go('app.siteblog', { id: $stateParams.id });
+	};
 
+ 	$scope.viewEvents = function() { 
+    	$state.go('app.siteevents', { id: $stateParams.id });
+	};
+	
+ 	$scope.viewGallery = function() { 
+    	$state.go('app.sitegallery', { id: $stateParams.id });
+	};
 })
 
 .controller('SiteAboutCtrl', function($scope, $state, $stateParams, $facebook) {
@@ -13,7 +27,6 @@ angular.module('pager')
 	  
 	function getPageData() {
       $facebook.api(pageID).then(function(response) { 
-		console.log(response);
         var pageData = {
 			about: response.about,
 			description: response.description,
@@ -22,7 +35,6 @@ angular.module('pager')
 			address: response.location
         };
 		$scope.aboutInformation = pageData;
-			console.log(pageData.address);
       });
 	  
 	}
