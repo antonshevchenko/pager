@@ -1,6 +1,6 @@
 angular.module('pager')
 
-.controller('HeaderCtrl', function($rootScope, $scope, $state, User) {
+.controller('HeaderCtrl', function($rootScope, $scope, $state, $facebook, User) {
   function updateUser() {
     $scope.name = User.getName().split(' ')[0];
     $scope.image = 'http://agencedianeriel.com/photo/Ostiguy-Jeanne-nouv09.jpg';
@@ -8,6 +8,13 @@ angular.module('pager')
 
   $scope.openMenu = function(open) {
     $scope.isMenuOpen = open;
+  };
+
+  $scope.logout = function() {
+    $facebook.logout().then(function(response) {
+      User.logout();
+      $state.go('home');
+    });
   };
 
   // Update user name in header
