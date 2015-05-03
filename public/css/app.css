@@ -234,12 +234,16 @@ edit-category-img {
   border: 2px solid white; }
   .pager-option.pager-option-selected > div {
     background-color: rgba(84, 172, 244, 0.3); }
+    .pager-option.pager-option-selected > div:hover {
+      background-color: rgba(84, 172, 244, 0.3); }
   .pager-option > div {
     display: flex;
     -webkit-align-items: center;
     width: 100%;
     height: 100%;
     background-color: rgba(84, 172, 244, 0.9); }
+    .pager-option > div:hover {
+      background-color: rgba(84, 172, 244, 0.95); }
     .pager-option > div > div {
       width: 100%; }
   .pager-option h3, .pager-option p {

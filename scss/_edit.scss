@@ -14,9 +14,13 @@ edit-category-img {
   border: 2px solid white;
 
   &.pager-option-selected {
-    >div {
+    > div {
       // background-color: rgba(86, 47, 52, 0.5);
       background-color: rgba(84, 172, 244, 0.3);
+
+      &:hover {
+        background-color: rgba(84, 172, 244, 0.3);
+      }
     }
   }
 
@@ -27,6 +31,10 @@ edit-category-img {
     height: 100%;
     // background-color: rgba(86, 47, 52, 0.9);
     background-color: rgba(84, 172, 244, 0.9);
+
+    &:hover {
+      background-color: rgba(84, 172, 244, 0.95);
+    }
 
     > div {
       width: 100%;
