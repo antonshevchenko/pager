@@ -25,5 +25,11 @@ angular.module('pager')
     setName: function(name) {
       localStorageService.set('user.name', name);
     },
+
+    logout: function() {
+      setAccesstoken(null);
+      setUserID(null);
+      setName(null);
+    },
   };
 });
