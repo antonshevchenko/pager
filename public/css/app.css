@@ -132,17 +132,37 @@ body {
 .section-text {
   margin: 30px 0; }
 
-.section-creator div.creator {
-  display: flex;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-origin: center;
+.section-col-divided .col-md-4 {
+  border-right: 1px solid #e6e6e6; }
+  .section-col-divided .col-md-4:last-of-type {
+    border-right: 0; }
+
+.section-creator {
   color: white;
+  background-color: #333 !important; }
+  .section-creator.section {
+    padding: 30px 0; }
+
+.pager-testimonial {
+  display: flex;
+  color: #333;
+  background-color: white;
+  border-radius: 100px;
+  border-left: 0;
   -webkit-align-items: center; }
-.section-creator.section {
-  padding: 30px 0;
-  padding-bottom: 0; }
+  .pager-testimonial > div:first-child {
+    flex: 200px 0; }
+  .pager-testimonial > div:last-child {
+    flex: 1;
+    padding: 15px; }
+
+.pager-creator {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-size: cover;
+  background-position: center; }
 
 .btn-landing {
   border-radius: 0;
