@@ -1,23 +1,44 @@
 angular.module('pager')
 
-.controller('SiteHeaderCtrl', function($scope) {
-
+.controller('SiteHeaderCtrl', function($scope, $state, $stateParams) {
 	$scope.site = "The TRAP";
-
-})
-
-.controller('SiteAboutCtrl', function($scope) {
-
-	$scope.yolo = "cholo";
-
-	$scope.aboutInformation = {
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit, dolorem corporis, doloribus veritatis illo molestiae ut cupiditate ipsum! Harum nam dolorem non velit delectus fuga labore iste, libero, quo?",
-		address: "1234 Swag St.br",
-		phone: "5141231233",
-		email: "asdasdasdads",
-		hours: "9-5",
+	
+ 	$scope.viewSite = function() { 
+    	$state.go('app.site', { id: $stateParams.id });
+	};
+	
+ 	$scope.viewBlog = function() { 
+    	$state.go('app.siteblog', { id: $stateParams.id });
 	};
 
+ 	$scope.viewEvents = function() { 
+    	$state.go('app.siteevents', { id: $stateParams.id });
+	};
+	
+ 	$scope.viewGallery = function() { 
+    	$state.go('app.sitegallery', { id: $stateParams.id });
+	};
+})
+
+.controller('SiteAboutCtrl', function($scope, $state, $stateParams, $facebook) {
+
+	// Retrieve page ID
+  	var pageID = $stateParams.id;
+	  
+	function getPageData() {
+      $facebook.api(pageID).then(function(response) { 
+        var pageData = {
+			about: response.about,
+			description: response.description,
+			phone: response.phone,
+			operatingHours: response.hours,
+			address: response.location
+        };
+		$scope.aboutInformation = pageData;
+      });
+	  
+	}
+	getPageData();
 })
 
 .controller('SiteBlogCtrl', function($scope) {

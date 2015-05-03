@@ -9,10 +9,11 @@
 		<div class="col-md-12">
 			<div class="contact">
 				<h2>Reach out</h2>
-				Address: {{aboutInformation.address}} <br>
-				Phone: {{aboutInformation.phone}}<br>
-				Email: {{aboutInformation.email}}<br>
-				Hours of operation: {{aboutInformation.hours}}<br>			
+				Address: {{ aboutInformation.address.street }} {{ aboutInformation.address.city }} {{ aboutInformation.address.state }} {{ aboutInformation.address.country }} <br>
+				Description: {{aboutInformation.description}} <br>
+				Phone: {{aboutInformation.phone}} <br>
+				Email: {{aboutInformation.email}} <br>
+				Hours of operation: {{ aboutInformation.operatingHours }} <br>			
 			</div>
 		</div>
 	</div>
