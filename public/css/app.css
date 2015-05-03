@@ -16,6 +16,9 @@ body {
 .text-gray {
   color: gray !important; }
 
+.lead-lg {
+  font-size: 24px; }
+
 .bg-white {
   background-color: white; }
 
@@ -80,6 +83,7 @@ body {
       box-shadow: 0px 0px 15px #e6e6e6; }
 
 .pager-landing {
+  position: relative;
   min-height: 100%;
   background-image: url('../img/landing.jpg');
   background-size: cover; }
@@ -87,7 +91,7 @@ body {
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: center; }
+  -webkit-align-items: flex-start; }
 
 .pager-landing-title {
   width: 100%;
@@ -97,8 +101,31 @@ body {
     font-weight: 300;
     font-size: 72px; }
 
-.section:nth-child(2n) {
-  background-color: #e6e6e6; }
+.pager-landing-browser {
+  display: block;
+  position: absolute;
+  top: 0; }
+
+.section {
+  position: relative;
+  padding: 120px 30px;
+  overflow-y: hidden; }
+  .section:nth-child(2n) {
+    background-color: #e6e6e6; }
+    .section:nth-child(2n) .pager-landing-browser {
+      right: 0; }
+
+.section-header {
+  display: flex;
+  -webkit-align-items: flex-end; }
+  .section-header .lead {
+    margin-bottom: 10px; }
+
+.section-header-icon {
+  font-size: 172px; }
+
+.section-text {
+  margin: 30px 0; }
 
 .btn-landing {
   border-radius: 0;

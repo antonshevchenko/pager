@@ -1,4 +1,5 @@
 .pager-landing {
+  position: relative;
   min-height: 100%;
   background-image: url('../img/landing.jpg');
   background-size: cover;
@@ -7,7 +8,7 @@
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: center;
+  -webkit-align-items: flex-start;
 }
 
 .pager-landing-title {
@@ -21,10 +22,41 @@
   }
 }
 
+.pager-landing-browser {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
 .section {
+  position: relative;
+  padding: $padding * 8 $padding * 2;
+  overflow-y: hidden;
+
   &:nth-child(2n) {
     background-color: $pager-gray;
+
+    .pager-landing-browser {
+      right: 0;
+    }
   }
+}
+
+.section-header {
+  display: flex;
+  -webkit-align-items: flex-end;
+
+  .lead {
+    margin-bottom: 10px;
+  }
+}
+
+.section-header-icon {
+  font-size: 172px;
+}
+
+.section-text {
+  margin: $padding * 2 0;
 }
 
 .btn-landing {
