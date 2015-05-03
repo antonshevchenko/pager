@@ -58,16 +58,65 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'LocalStorageModule','ngFa
     })
 
     .state('app.site', {
-      url: '/sites/:id',
+      url: '/sites/:id/about',
       title: 'Site Page',
+      params: { id: null },
       views: {
         'header': {
           templateUrl: 'public/views/siteHeader.html',
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/siteHome.html',
-          controller: 'SiteHomeCtrl'
+          templateUrl: 'public/views/siteAbout.html',
+          controller: 'SiteAboutCtrl'
+        },
+      }
+    })
+
+    .state('app.siteblog', {
+      url: '/sites/:id/blog',
+      title: 'Blog',
+      params: { id: null },
+      views: {
+        'header': {
+          templateUrl: 'public/views/siteHeader.html',
+          controller: 'SiteHeaderCtrl'
+        },
+        'content': {
+          templateUrl: 'public/views/siteBlog.html',
+          controller: 'SiteBlogCtrl'
+        },
+      }
+    })
+
+    .state('app.siteevents', {
+      url: '/sites/:id/events',
+      title: 'Events',
+      params: { id: null },
+      views: {
+        'header': {
+          templateUrl: 'public/views/siteHeader.html',
+          controller: 'SiteHeaderCtrl'
+        },
+        'content': {
+          templateUrl: 'public/views/siteEvents.html',
+          controller: 'SiteEventsCtrl'
+        },
+      }
+    })
+
+    .state('app.sitegallery', {
+      url: '/sites/:id/gallery',
+      title: 'Gallery',
+      params: { id: null },
+      views: {
+        'header': {
+          templateUrl: 'public/views/siteHeader.html',
+          controller: 'SiteHeaderCtrl'
+        },
+        'content': {
+          templateUrl: 'public/views/siteGallery.html',
+          controller: 'SiteGalleryCtrl'
         },
       }
     });

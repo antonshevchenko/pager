@@ -1,7 +1,7 @@
 angular.module('pager')
 
 .controller('HeaderCtrl', function($scope, $state) {
-  $scope.user = 'Ostiguy';
+
   $scope.image = 'http://agencedianeriel.com/photo/Ostiguy-Jeanne-nouv09.jpg';
 
   $scope.$on('$viewContentLoaded', function() {
