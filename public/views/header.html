@@ -17,10 +17,10 @@
 				<ul class="nav navbar-nav navbar-right">
 					{{name}}
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown">
-							<img class="navbar-image" src="{{image}}" alt=""><span class="caret"></span>
+						<a id="menu" class="dropdown-toggle" data-toggle="dropdown" data-target="#" aria-haspopup="true" role="button" aria-expanded="false">
+							<img class="navbar-image" ng-src="{{image}}"><span class="caret"></span>
 						</a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu">
 							<li><a ui-sref="/">Logout</a></li>
 						</ul>
 					</li>
