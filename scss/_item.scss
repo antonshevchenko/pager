@@ -1,12 +1,15 @@
 .pager-item {
   display: flex;
   padding: $padding;
-  margin-bottom: $padding * 2;
   border: 1px solid $pager-gray;
+  border-bottom: 0;
   -webkit-align-items: center;
   cursor: pointer;
-
   transition: box-shadow 0.1s ease;
+
+  &:last-of-type {
+    border-bottom: 1px solid $pager-gray;
+  }
 
   .pager-image {
     flex: 100px 0px;
