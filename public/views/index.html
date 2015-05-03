@@ -1,6 +1,6 @@
 <div class="pager-landing">
   <div class="pager-landing-container">
-    <div class="pager-landing-title">
+    <div class="pager-landing-title" ng-controller="FacebookContoller">
       <h1>Pager</h1>
       <p>Facebook Pages meets the web</p>
       <div class="row">
@@ -14,7 +14,9 @@
           <p>Bye</p>
         </div>
       </div>
-      <button type="button" class="btn btn-landing"><i class="fa fa-facebook-square"></i> Login with Facebook</button>
+      <button type="button" class="btn btn-landing" ng-click="login()">
+        <i class="fa fa-facebook-square"></i> Login with Facebook
+      </button>
     </div>
   </div>
 
@@ -22,6 +24,7 @@
     <div class="section">
       <div class="container">
         <p>Hello.</p>
+        <p>{{welcomeMsg}}</p>
       </div>
     </div>
 
