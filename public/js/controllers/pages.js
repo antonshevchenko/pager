@@ -1,49 +1,53 @@
 angular.module('pager')
 
-.controller('PagesCtrl', function($scope, $state, $stateParams, $facebook) {
-  
-	var pageList = $stateParams.pageList;
+.controller('PagesCtrl', function($q, $scope, $state, $facebook, User) {
+  // Default values
 	$scope.pages = [];
-    
-	for (var i = pageList.length - 1; i >= 0; i--) {
-		
-		var pageID = pageList[i].id;
-		var pageName = pageList[i].name;
-		
 
-		$facebook.api(pageID).then( 
-			function(response) {
+  function getPageData(pages) {
+    pages.map(function(page) {
+      $facebook.api(page.id).then(function(response) {
+        var data = {
+          id: response.id,
+          name: response.name,
+          likes: response.likes,
+          checkins: response.checkins,
+          image: null
+        };
 
-				$scope.pages.push({
-					id: pageID,
-					title: pageName,
-					image: "http://images.livemixtapes.com/artists/blaze/migo_lingo/cover.jpg",
-					likes: response.likes,
-					checkins: response.checkins
-				});
+        // Get picture
+        $facebook.api(page.id + '/photos').then(function(res) {
+          if (!angular.isUndefined(res.data)) {
+            data.image = res.data.picture;
+          }
+          $scope.pages.push(data);
+        });
+      });
+    });
+  }
 
-  				// console.log(response.likes);
-  				// console.log(response.checkins);
-			},
-			function(err) {
-				console.log('fb api is being a hoe!');
-			}
-		);
+  function getPages() {
+    // Get pages
+    $facebook
+      .api("me/accounts?" + User.getAccessToken())
+      .then(function(response) {
+        var pages = [];
+        response.data.map(function(page) {
+          pages.push({
+            id: page.id,
+            name: page.name
+          });
+        });
 
-	};
+        // Get page data
+        getPageData(pages);
+      });
+  }
 
-	
-	console.log($scope.pages);
-		
-
-
-
-  // $scope.pages = [
-  //   { id: 123, title: 'Hannah Montana', image: 'http://images.livemixtapes.com/artists/blaze/migo_lingo/cover.jpg', likes: 480, checkins: 1245 },
-  //   { id: 456, title: 'Hannah Banana', image: 'http://images.livemixtapes.com/artists/blaze/migo_lingo/cover.jpg', likes: 12480, checkins: 542231 },
-  // ];
-
-  $scope.editPage = function(page, swag) {
-    $state.go('app.edit', { id: page.id, name: swag});
+  $scope.editPage = function(page) {
+    $state.go('app.edit', { id: page.id });
   };
+
+  // Get initial list of pages
+  getPages();
 });

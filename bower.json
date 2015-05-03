@@ -29,6 +29,7 @@
     "bootstrap": "~3.3.4",
     "fontawesome": "~4.3.0",
     "angular-bootstrap": "~0.13.0",
-    "ng-facebook": "~0.1.6"
+    "ng-facebook": "~0.1.6",
+    "angular-local-storage": "~0.1.5"
   }
 }
