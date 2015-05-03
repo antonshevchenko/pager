@@ -10,11 +10,15 @@ angular.module('pager')
     events: false,
     gallery: false
   };
-  
-  $scope.updateCategories = function(page) {
-    $scope.options = { about: page.about,
-    blog: page.blog,
-    events : page.events,
-    gallery : page.gallery };
-	};
+
+  $scope.changeOption = function(option) {
+    $scope.options[option] = !$scope.options[option];
+  };
+
+  // $scope.updateCategories = function(page) {
+  //   $scope.options = { about: page.about,
+  //   blog: page.blog,
+  //   events : page.events,
+  //   gallery : page.gallery };
+	// };
 });

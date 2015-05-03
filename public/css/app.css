@@ -192,6 +192,18 @@ body {
     background-color: #3b5998;
     border-color: #3b5998; }
 
+.btn-update {
+  border-radius: 0;
+  color: white;
+  border-color: #3b5998;
+  background-color: #3b5998;
+  outline: 0 !important;
+  margin-top: 30px; }
+  .btn-update:hover, .btn-update:focus, .btn-update:active {
+    color: white;
+    background-color: #3b5998;
+    border-color: #3b5998; }
+
 .header.site {
   font-family: Lato, sans-serif;
   font-size: 19px;
@@ -206,3 +218,30 @@ body {
     padding: 15px 5px 10px 5px; }
     .header.site .nav > li > a:hover {
       border-bottom: 3px solid #000; }
+
+edit-category-img {
+  display: block;
+  position: absolute; }
+
+.pager-option {
+  display: flex;
+  height: 250px;
+  -webkit-align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  cursor: pointer;
+  border: 2px solid white; }
+  .pager-option.pager-option-selected > div {
+    background-color: rgba(86, 47, 52, 0.5); }
+  .pager-option > div {
+    display: flex;
+    -webkit-align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(86, 47, 52, 0.9); }
+    .pager-option > div > div {
+      width: 100%; }
+  .pager-option h3, .pager-option p {
+    flex: 1;
+    color: white; }
