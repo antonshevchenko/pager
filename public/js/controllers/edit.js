@@ -6,13 +6,11 @@ angular.module('pager')
   
   console.log("pageID: " + pageID);
     function getPageData() {
-	    $facebook.api("thetrapmtl").then(       // Replace for a legit ID 
+	    $facebook.api(pageID).then(       // Replace for a legit ID 
 	      function(response) {        
           $scope.page = { "About": true, "Blog" : true, "Gallery" : true, "Events" : true };
         },
-	      function(err) {
-          console.log("hi");
-	      });
+	      function(err) {});
 	  }
   
 	getPageData();
