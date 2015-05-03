@@ -131,3 +131,20 @@
     border-color: #3b5998;
   }
 }
+
+.btn-update {
+  border-radius: 0;
+  color: white;
+  border-color: #3b5998;
+  background-color: #3b5998;
+  outline: 0 !important;
+  margin-top: $padding * 2;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: #3b5998;
+    border-color: #3b5998;
+  }
+}
