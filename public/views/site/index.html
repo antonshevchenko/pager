@@ -11,7 +11,7 @@
     </div>
 
     <!-- navigation -->
-    <nav>
+    <nav class="menu">
       <div class="container">
   			<div class="collapse navbar-collapse">
   				<ul class="nav navbar-nav">
@@ -26,18 +26,37 @@
     </nav>
 
     <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <!-- photos -->
+          <h3>Featured</h3>
+          <div class="photo-post" ng-repeat="photo in photos | limitTo: 6">            
+            <a ng-href="{{photo.link}}">
+              <img ng-src="{{photo.source}}"/>
+            </a>
+            <p><cite class="lead text-gray">{{photo.created_time | date}}</cite></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3>Contact</h3>
+          <div class="contact-wrap">
+            <div class="address">
+                <b>The Trap MTL</b> <br/>
+                420 De la Montagne<br>
+                Montreal, QC, H1H 1H1<br> 
+                (514) 438-7924<br>
+                <a href="http://www.thetrapmtl.com" target="_blank">www.thetrapmtl.com</a><br><br>
+                <img src="/public/img/map.png" class="img-responsive">         
+            </div>      
+          </div>  
+        </div>
+      </div>
       <!-- news -->
       <!-- <div class="feed-post" ng-repeat="post in news | limitTo: 3">
         <p class="lead lead-lg">{{post.message}}</p>
       </div> -->
 
-      <!-- photos -->
-      <div class="photo-post" ng-repeat="photo in photos | limitTo: 6">
-        <p><cite class="lead text-gray">{{photo.created_time | date}}</cite></p>
-        <a ng-href="{{photo.link}}">
-          <img ng-src="{{photo.source}}"/>
-        </a>
-      </div>
+  
     </div>
   </div>
 </div>
