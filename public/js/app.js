@@ -53,64 +53,75 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
     })
 
     .state('app.site', {
-      url: '/sites/:id/about',
-      title: 'Site Page',
+      url: '/sites/:id',
       params: { id: null },
       views: {
         'header': {
-          templateUrl: 'public/views/siteHeader.html',
+          templateUrl: 'public/views/site/header.html',
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/siteAbout.html',
+          templateUrl: 'public/views/site/index.html',
+          controller: 'SiteHomeCtrl'
+        },
+      }
+    })
+
+    .state('app.site-about', {
+      url: '/sites/:id/about',
+      params: { id: null },
+      views: {
+        'header': {
+          templateUrl: 'public/views/site/header.html',
+          controller: 'SiteHeaderCtrl'
+        },
+        'content': {
+          templateUrl: 'public/views/site/about.html',
           controller: 'SiteAboutCtrl'
         },
       }
     })
 
-    .state('app.siteblog', {
+    .state('app.site-blog', {
       url: '/sites/:id/blog',
-      title: 'Blog',
       params: { id: null },
       views: {
         'header': {
-          templateUrl: 'public/views/siteHeader.html',
+          templateUrl: 'public/views/site/header.html',
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/siteBlog.html',
+          templateUrl: 'public/views/site/blog.html',
           controller: 'SiteBlogCtrl'
         },
       }
     })
 
-    .state('app.siteevents', {
+    .state('app.site-events', {
       url: '/sites/:id/events',
-      title: 'Events',
       params: { id: null },
       views: {
         'header': {
-          templateUrl: 'public/views/siteHeader.html',
+          templateUrl: 'public/views/site/header.html',
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/siteEvents.html',
+          templateUrl: 'public/views/site/events.html',
           controller: 'SiteEventsCtrl'
         },
       }
     })
 
-    .state('app.sitegallery', {
+    .state('app.site-gallery', {
       url: '/sites/:id/gallery',
-      title: 'Gallery',
       params: { id: null },
       views: {
         'header': {
-          templateUrl: 'public/views/siteHeader.html',
+          templateUrl: 'public/views/site/header.html',
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/siteGallery.html',
+          templateUrl: 'public/views/site/gallery.html',
           controller: 'SiteGalleryCtrl'
         },
       }

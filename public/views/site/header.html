@@ -1,0 +1,25 @@
+<div class="header site">
+	<nav class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="app.sites">{{page.name}}</a>
+				<span class="navbar-brand text-gray" ng-show="view">{{page.name}}</span>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a ui-sref="app.site-about" data-ng-click="viewAbout()" ng-if="options.about">About</a></li>
+					<li><a ui-sref="app.site-blog" data-ng-click="viewBlog()" ng-if="options.blog">Blog</a></li>
+					<li><a ui-sref="app.site-events" data-ng-click="viewEvents()" ng-if="options.events">Events</a></li>
+					<li><a ui-sref="app.site-gallery" data-ng-click="viewGallery()" ng-if="options.gallery">Gallery</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
