@@ -84,22 +84,25 @@ body {
 
 .pager-landing {
   position: relative;
-  min-height: 100%;
+  height: 450px;
   background-image: url('../img/landing.jpg');
-  background-size: cover; }
+  background-size: cover;
+  background-position: bottom; }
 
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: flex-start; }
+  -webkit-align-items: center; }
 
 .pager-landing-title {
   width: 100%;
   text-align: center;
   color: white; }
   .pager-landing-title h1 {
-    font-weight: 300;
-    font-size: 72px; }
+    font-weight: 900;
+    font-size: 72px;
+    text-transformation: uppercase;
+    letter-spacing: 3px; }
 
 .pager-landing-browser {
   display: block;
@@ -144,7 +147,8 @@ body {
   color: white;
   border-color: #3b5998;
   background-color: #3b5998;
-  outline: 0 !important; }
+  outline: 0 !important;
+  margin-top: 30px; }
   .btn-landing:hover, .btn-landing:focus, .btn-landing:active {
     color: white;
     background-color: #3b5998;
