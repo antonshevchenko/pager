@@ -1,6 +1,7 @@
 data/
 node_modules/
 bower_components/
+npm-debug.log
 access.log
 .DS_Store
 **/**/.DS_Store
