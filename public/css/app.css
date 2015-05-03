@@ -154,9 +154,31 @@ body {
 
 .section-creator {
   color: white;
-  background-color: #333 !important; }
+  background-color: #e6e6e6 !important; }
+  .section-creator .creator-title {
+    display: inline-block;
+    color: #333;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+    padding: 15px; }
+  .section-creator .col-md-4 {
+    color: #333;
+    background-color: white; }
+  .section-creator .creator-content {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden; }
+  .section-creator .creator {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; }
   .section-creator.section {
-    padding: 30px 0; }
+    padding-top: 0;
+    padding-bottom: 30px; }
 
 .pager-testimonial {
   display: flex;
@@ -190,3 +212,18 @@ body {
     color: white;
     background-color: #3b5998;
     border-color: #3b5998; }
+
+.header.site {
+  font-family: Lato, sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  text-transform: lowercase; }
+  .header.site a {
+    color: #000; }
+  .header.site .nav > li {
+    padding: 0 10px; }
+  .header.site .nav > li > a {
+    background: none;
+    padding: 15px 5px 10px 5px; }
+    .header.site .nav > li > a:hover {
+      border-bottom: 3px solid #000; }

@@ -8,10 +8,14 @@ angular.module('pager')
 
     // Get user name
     $facebook.api('/me').then(function(response) {
-      User.setName(response.name);
+      User.setName(response.first_name);
 
-      // Broadcast login event
-      $rootScope.$broadcast('facebook:login');
+      $facebook.api('/me/picture').then(function(res) {
+        User.setPicture(res.data.url);
+
+        // Broadcast login event
+        $rootScope.$broadcast('facebook:login');
+      });
     });
 
     // Go to the pages view
@@ -20,7 +24,9 @@ angular.module('pager')
 
 	$scope.login = function() {
 		$facebook.login().then(function(response) {
-      doLogin(response);
+      if (response.status === 'connected') {
+        doLogin(response);
+      }
 		});
 	};
 
