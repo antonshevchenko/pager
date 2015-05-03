@@ -14,10 +14,24 @@ router.get('/:id', function(req, res) {
   });
 });
 
+router.put('/:id', function(req, res) {
+  var data = {
+    options: req.body.options
+  };
+  Page.getByIdAndUpdate(req.params.id, data, function(err, data) {
+    if (err) {
+      errorHandler(res)(err);
+    } else {
+      res.send(data);
+    }
+  });
+});
+
 router.post('/', function(req, res) {
   var data = {
     pageID: req.body.id,
-    user: req.body.user
+    user: req.body.user,
+    options: req.body.options
   };
   var page = new Page(data);
   page.save(function (err) {
