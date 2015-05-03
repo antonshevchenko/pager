@@ -3,7 +3,7 @@ angular.module('pager')
 .controller('PagesCtrl', function($q, $scope, $state, $facebook, User) {
   // Default values
 	$scope.pages = [];
-  
+
   function getPageData(pages) {
     pages.map(function(page) {
       $facebook.api(page.id).then(function(response) {
@@ -17,8 +17,8 @@ angular.module('pager')
 
         // Get picture
         $facebook.api(page.id + '/photos').then(function(res) {
-          if (!angular.isUndefined(res.data)) {
-            data.image = res.data.picture;
+          if (!angular.isUndefined(res.data) && res.data.length) {
+            data.image = res.data[0].picture;
           }
           $scope.pages.push(data);
         });
