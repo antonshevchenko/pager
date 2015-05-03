@@ -6,5 +6,6 @@ angular.module('pager')
 
   $scope.$on('$viewContentLoaded', function() {
     $scope.view = $state.current.title;
+ 
   });
 });

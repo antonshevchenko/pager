@@ -8,11 +8,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'LocalStorageModule','ngFa
   // Setup local storage
   localStorageServiceProvider.setPrefix('pager');
 
-  // $locationProvider.html5Mode({
-  //   enabled: true,
-  //   requireBase: false
-  // });
-
   $stateProvider
     .state('app', {
       abstract: true,

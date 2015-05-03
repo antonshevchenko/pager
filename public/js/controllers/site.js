@@ -6,18 +6,27 @@ angular.module('pager')
 
 })
 
-.controller('SiteAboutCtrl', function($scope) {
+.controller('SiteAboutCtrl', function($scope, $state, $stateParams, $facebook) {
 
-	$scope.yolo = "cholo";
-
-	$scope.aboutInformation = {
-		description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum reprehenderit, dolorem corporis, doloribus veritatis illo molestiae ut cupiditate ipsum! Harum nam dolorem non velit delectus fuga labore iste, libero, quo?",
-		address: "1234 Swag St.br",
-		phone: "5141231233",
-		email: "asdasdasdads",
-		hours: "9-5",
-	};
-
+	// Retrieve page ID
+  	var pageID = $stateParams.id;
+	  
+	function getPageData() {
+      $facebook.api(pageID).then(function(response) { 
+		console.log(response);
+        var pageData = {
+			about: response.about,
+			description: response.description,
+			phone: response.phone,
+			operatingHours: response.hours,
+			address: response.location
+        };
+		$scope.aboutInformation = pageData;
+			console.log(pageData.address);
+      });
+	  
+	}
+	getPageData();
 })
 
 .controller('SiteBlogCtrl', function($scope) {
