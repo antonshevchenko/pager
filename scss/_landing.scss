@@ -59,14 +59,35 @@
   margin: $padding * 2 0;
 }
 
+.section-creator {
+  div.creator {
+    display: flex;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-origin: center;
+    color: white;
+    -webkit-align-items: center;
+  }
+
+  &.section {
+    padding: $padding * 2 0;
+    padding-bottom: 0;
+  }
+}
+
 .btn-landing {
   border-radius: 0;
-  color: black;
-  border-color: black;
+  color: #3b5998;
+  border-color: #3b5998;
   background-color: transparent;
+  outline: 0 !important;
 
-  &:hover {
-    background-color: inherit;
-    border-color: black;
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: #3b5998;
+    border-color: #3b5998;
   }
 }
