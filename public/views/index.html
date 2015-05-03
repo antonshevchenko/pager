@@ -1,38 +1,80 @@
 <div class="pager-landing">
   <div class="pager-landing-container">
-    <div class="pager-landing-title" ng-controller="FacebookContoller">
+    <div class="pager-landing-title">
       <h1>Pager</h1>
       <p>Facebook Pages meets the web</p>
+      <button type="button" class="btn btn-lg btn-landing"><i class="fa fa-facebook-official"></i> Login with Facebook</button>
+    </div>
+  </div>
+  <!-- <img id="pager-landing-browser" src="public/img/browser.png"> -->
+</div>
+
+<div class="bg-white">
+  <div class="section">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <p>Hello</p>
+        <div class="col-md-6">
+          <div class="section-header">
+            <i class="fa fa-facebook-official section-header-icon pull-left" style="color: #3b5998;"></i>
+            <p class="lead lead-lg">Facebook integration from the start</p>
+          </div>
+          <p class="lead section-text">Use your existing Facebook Page to create a fully functional website.</p>
         </div>
-        <div class="col-md-4">
-          <p>Hi</p>
-        </div>
-        <div class="col-md-4">
-          <p>Bye</p>
+        <div class="col-md-6">
+          <img class="pager-landing-browser" src="public/img/browser.png">
         </div>
       </div>
-      <button type="button" class="btn btn-landing" ng-click="login()">
-        <i class="fa fa-facebook-square"></i> Login with Facebook
-      </button>
-      <button ng-click="pagesView()">Sway</button>
-      <p>{{welcomeMsg}}</p>
     </div>
   </div>
 
-  <div class="bg-white">
-    <div class="section">
-      <div class="container">
-        <p>Hello.</p>        
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="pager-landing-browser" src="public/img/browser.png">
+        </div>
+        <div class="col-md-6">
+          <div class="section-header">
+            <p class="text-right lead lead-lg">A user interface you already know and love</p>
+            <i class="fa fa-magic section-header-icon pull-right"></i>
+          </div>
+          <p class="lead section-text">Manage your website's content through Facebook Pages. Display events, photos and your page's feed. You have full control over what your users will see online.</p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="section">
-      <div class="container">
-        <p>Hello.</p>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fa fa-code section-header-icon"></i>
+          <p class="lead">No coding required</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-tasks section-header-icon"></i>
+          <p class="lead">Managed through Facebook</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fa fa-globe section-header-icon"></i>
+          <p class="lead">Your own web presence</p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="section section-creator">
+      <p class="lead lead-lg text-center">Created by</p>
+      <div class="row">
+        <div class="col-md-4 text-center creator" style="background-image: url('https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/1781247_10202928560285944_1174574177_o.jpg');">
+          <!-- <p class="lead">Alexandru Ilea</p> -->
+        </div>
+        <div class="col-md-4 text-center creator" style="background-image: url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/1909322_10152269240370219_548703689_o.jpg');">
+          <!-- <p class="lead">Anton Shevchenko</p> -->
+        </div>
+        <div class="col-md-4 text-center creator" style="background-image: url('https://pbs.twimg.com/profile_images/555862207989178370/oifQKeFe.jpeg');">
+          <!-- <p class="lead">Darrel-Day Guerrero</p> -->
+        </div>
+      </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 .pager-landing {
+  position: relative;
   min-height: 100%;
   background-image: url('../img/landing.jpg');
   background-size: cover;
@@ -7,7 +8,7 @@
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: center;
+  -webkit-align-items: flex-start;
 }
 
 .pager-landing-title {
@@ -21,20 +22,72 @@
   }
 }
 
+.pager-landing-browser {
+  display: block;
+  position: absolute;
+  top: -($padding * 4);
+}
+
 .section {
+  position: relative;
+  padding: $padding * 8 $padding * 2;
+  overflow-y: hidden;
+
   &:nth-child(2n) {
     background-color: $pager-gray;
+
+    .pager-landing-browser {
+      right: 0;
+    }
+  }
+}
+
+.section-header {
+  display: flex;
+  -webkit-align-items: flex-end;
+
+  .lead {
+    margin-bottom: 10px;
+  }
+}
+
+.section-header-icon {
+  font-size: 172px;
+}
+
+.section-text {
+  margin: $padding * 2 0;
+}
+
+.section-creator {
+  div.creator {
+    display: flex;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-origin: center;
+    color: white;
+    -webkit-align-items: center;
+  }
+
+  &.section {
+    padding: $padding * 2 0;
+    padding-bottom: 0;
   }
 }
 
 .btn-landing {
   border-radius: 0;
-  color: black;
-  border-color: black;
+  color: #3b5998;
+  border-color: #3b5998;
   background-color: transparent;
+  outline: 0 !important;
 
-  &:hover {
-    background-color: inherit;
-    border-color: black;
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: #3b5998;
+    border-color: #3b5998;
   }
 }
