@@ -15,7 +15,8 @@ edit-category-img {
 
   &.pager-option-selected {
     >div {
-      background-color: rgba(86, 47, 52, 0.5);
+      // background-color: rgba(86, 47, 52, 0.5);
+      background-color: rgba(84, 172, 244, 0.3);
     }
   }
 
@@ -24,7 +25,8 @@ edit-category-img {
     -webkit-align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(86, 47, 52, 0.9);
+    // background-color: rgba(86, 47, 52, 0.9);
+    background-color: rgba(84, 172, 244, 0.9);
 
     > div {
       width: 100%;
@@ -36,6 +38,32 @@ edit-category-img {
     flex: 1;
     color: white;
   }
+}
 
+.pager-options-btn {
+  padding: 0;
+  border: 2px solid white;
+}
 
+.btn-pager {
+  width: 100%;
+  border-radius: 0;
+  color: white;
+  background-color: rgb(84, 172, 244);
+  border-color: rgb(84, 172, 244);
+  outline: 0 !important;
+  height: 42px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: rgb(84, 172, 244);
+  }
+
+  &.btn-pager-outline {
+    color: rgb(84, 172, 244);
+    background-color: white;
+    border: 1px solid;
+  }
 }

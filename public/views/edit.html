@@ -36,7 +36,12 @@
 		</div>
 	</div>
 
-	<button type="button" class="btn btn-lg btn-update" ng-click="updateCategories(page)">
-		<i class="fa fa-refresh"></i> Update
-	</button>
+	<div class="row">
+		<div class="col-md-6 pager-options-btn">
+			<button type="button" class="btn btn-pager" ng-click="saveOptions()">Update</button>
+		</div>
+		<div class="col-md-6 pager-options-btn">
+			<button type="button" class="btn btn-pager btn-pager-outline" ng-click="viewPage()">View Page</button>
+		</div>
+	</div>
 </div>

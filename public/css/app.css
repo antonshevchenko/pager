@@ -233,15 +233,35 @@ edit-category-img {
   cursor: pointer;
   border: 2px solid white; }
   .pager-option.pager-option-selected > div {
-    background-color: rgba(86, 47, 52, 0.5); }
+    background-color: rgba(84, 172, 244, 0.3); }
   .pager-option > div {
     display: flex;
     -webkit-align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(86, 47, 52, 0.9); }
+    background-color: rgba(84, 172, 244, 0.9); }
     .pager-option > div > div {
       width: 100%; }
   .pager-option h3, .pager-option p {
     flex: 1;
     color: white; }
+
+.pager-options-btn {
+  padding: 0;
+  border: 2px solid white; }
+
+.btn-pager {
+  width: 100%;
+  border-radius: 0;
+  color: white;
+  background-color: #54acf4;
+  border-color: #54acf4;
+  outline: 0 !important;
+  height: 42px; }
+  .btn-pager:hover, .btn-pager:focus, .btn-pager:active {
+    color: white;
+    background-color: #54acf4; }
+  .btn-pager.btn-pager-outline {
+    color: #54acf4;
+    background-color: white;
+    border: 1px solid; }
