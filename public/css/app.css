@@ -62,26 +62,26 @@ body {
 .pager-checkmark {
   width: 25px; }
 
-.header {
+.header.app {
   font-weight: 300;
   outline: 0 !important; }
-  .header .navbar-brand {
+  .header.app .navbar-brand {
     font-size: 35px;
     color: #000;
     padding-top: 40px; }
-  .header .navbar-nav {
+  .header.app .navbar-nav {
     display: flex;
     align-items: center;
     font-size: 22px;
     line-height: 22px; }
-  .header .navbar-image {
+  .header.app .navbar-image {
     width: 60px;
     height: 60px;
     border-radius: 50%; }
-  .header .nav > li > a:focus, .header .nav > li > a:hover {
+  .header.app .nav > li > a:focus, .header.app .nav > li > a:hover {
     transition: box-shadow 0.1s ease;
     background-color: transparent; }
-    .header .nav > li > a:focus .navbar-image, .header .nav > li > a:hover .navbar-image {
+    .header.app .nav > li > a:focus .navbar-image, .header.app .nav > li > a:hover .navbar-image {
       box-shadow: 0px 0px 15px #e6e6e6; }
 
 .pager-landing {

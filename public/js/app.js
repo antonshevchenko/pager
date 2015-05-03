@@ -55,6 +55,21 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'LocalStorageModule','ngFa
           controller: 'EditCtrl'
         },
       }
+    })
+
+    .state('app.site', {
+      url: '/sites/:id',
+      title: 'Site Page',
+      views: {
+        'header': {
+          templateUrl: 'public/views/siteHeader.html',
+          controller: 'SiteHeaderCtrl'
+        },
+        'content': {
+          templateUrl: 'public/views/siteHome.html',
+          controller: 'SiteHomeCtrl'
+        },
+      }
     });
 
   $urlRouterProvider.otherwise('/');
