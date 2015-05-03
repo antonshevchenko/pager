@@ -1,6 +1,6 @@
 angular.module('pager')
 
-.controller('EditCtrl', function($scope, $state, $stateParams, $facebook) {
+.controller('EditCtrl', function($scope, $state, $stateParams, $facebook, User, Api) {
   // Retrieve page ID
   var pageID = $stateParams.id;
 
@@ -19,10 +19,24 @@ angular.module('pager')
     $state.go('app.site', { id: pageID });
   };
 
-  // $scope.updateCategories = function(page) {
-  //   $scope.options = { about: page.about,
-  //   blog: page.blog,
-  //   events : page.events,
-  //   gallery : page.gallery };
-	// };
+  $scope.saveOptions = function() {
+    var params = {
+      pageID: pageID,
+      userID: User.getUserID(),
+      options: $scope.options
+    };
+    Api.savePage(params)
+      .then(function(data) {
+        console.log(data);
+        alert('Saved!');
+      });
+  };
+
+  // Try to get page options
+  Api.getPage(pageID)
+    .then(function(data) {
+      if (data) {
+        $scope.options = data.options;
+      }
+    });
 });

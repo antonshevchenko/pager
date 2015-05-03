@@ -4,7 +4,7 @@
       <div ng-style="{ 'background-image': 'url(' + page.image + ')' }"></div>
     </div>
     <div class="pager-header">
-      <p class="pager-title">{{page.name}} <img class="pager-checkmark" src="public/img/check.png"></p>
+      <p class="pager-title">{{page.name}} <img class="pager-checkmark" src="public/img/check.png" ng-if="isCreated(page)"></p>
       <p class="pager-subtitle"><i class="fa fa-thumbs-o-up"></i> {{page.likes | number}} likes | <i class="fa fa-map-marker"></i> {{page.checkins | number}} checkins</p>
     </div>
     <div class="pager-icon-right">

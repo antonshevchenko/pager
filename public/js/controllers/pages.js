@@ -1,8 +1,9 @@
 angular.module('pager')
 
-.controller('PagesCtrl', function($q, $scope, $state, $facebook, User) {
+.controller('PagesCtrl', function($q, $scope, $state, $facebook, User, Api) {
   // Default values
 	$scope.pages = [];
+	$scope.sites = [];
 
   function getPageData(pages) {
     pages.map(function(page) {
@@ -45,7 +46,22 @@ angular.module('pager')
         // Get page data
         getPageData(pages);
       });
+
+		// Get pages on our backend
+		Api.getPages()
+			.then(function(data) {
+				$scope.sites = data;
+			});
   }
+
+	$scope.isCreated = function(page) {
+		for (var i = 0; i < $scope.sites.length; i++) {
+			if (page.id == $scope.sites[i].pageID) {
+				return true;
+			}
+		}
+		return false;
+	};
 
   $scope.editPage = function(page) {
     $state.go('app.edit', { id: page.id });

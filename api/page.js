@@ -1,24 +1,10 @@
 var router = require('express').Router();
 var Page = require('../models/page');
-var User = require('../models/user');
 var errorHandler = require('../utils').errorHandler;
 var isEmpty = require('../utils').isEmpty;
 
-router.get('/:id', function(req, res) {
-  Page.getById(req.params.id, function(err, data) {
-    if (err) {
-      errorHandler(res)(err);
-    } else {
-      res.send(data);
-    }
-  });
-});
-
-router.put('/:id', function(req, res) {
-  var data = {
-    options: req.body.options
-  };
-  Page.getByIdAndUpdate(req.params.id, data, function(err, data) {
+router.get('/:pageID', function(req, res) {
+  Page.findOne({ pageID: req.params.pageID }, function(err, data) {
     if (err) {
       errorHandler(res)(err);
     } else {
@@ -28,17 +14,20 @@ router.put('/:id', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  var data = {
-    pageID: req.body.id,
-    user: req.body.user,
-    options: req.body.options
-  };
-  var page = new Page(data);
-  page.save(function (err) {
+  Page.findOneAndUpdate({ pageID: req.body.pageID }, { $set: req.body }, function(err, data) {
     if (err) {
       errorHandler(res)(err);
+    } else if (!data) {
+      var page = new Page(req.body);
+      page.save(function(err) {
+        if (err) {
+          errorHandler(res)(err);
+        } else {
+          res.send(page);
+        }
+      })
     } else {
-      res.send(page);
+      res.send(data);
     }
   });
 });
