@@ -8,12 +8,28 @@ angular.module('pager')
     function getPageData() {
 	    $facebook.api(pageID).then(       // Replace for a legit ID 
 	      function(response) {        
-          $scope.page = { "About": true, "Blog" : true, "Gallery" : true, "Events" : true };
+          console.log(response);
         },
 	      function(err) {});
 	  }
   
 	getPageData();
-
-//  $scope.page = {"field1":123, "field2":456, "field3":789, "field4":10};
+    
+   $scope.onCheckedAbout= function(page) {
+    $scope.page.showAbout = page.showAbout;
+   };
+   
+   $scope.onCheckedNews= function(page) {
+    $scope.page.showBlog = page.showBlog;
+   };
+   
+   $scope.onCheckedEvents = function(page) {
+    $scope.page.showEvents = page.showEvents;
+   };
+   
+   $scope.onCheckedImages = function(page) {
+    $scope.page.showImages = page.showGallery;
+   };
+   
+   
 });
