@@ -74,7 +74,9 @@
 
 .section-creator {
   color: white;
-  background-color: $pager-gray !important;
+  background-image: url('../img/landing.jpg');
+  background-size: cover;
+  background-position: top;
 
   .creator-title {
     display: inline-block;
@@ -86,7 +88,6 @@
 
   .col-md-4 {
     color: #333;
-    background-color: white;
   }
 
   .creator-content {
@@ -106,44 +107,8 @@
   }
 
   &.section {
-    padding-top: 0;
-    padding-bottom: $padding * 2;
-
+    padding: $padding * 2 0;
   }
-}
-
-.pager-testimonial {
-  display: flex;
-  color: #333;
-  background-color: white;
-  border-radius: 100px;
-  border-left: 0;
-  -webkit-align-items: center;
-
-  > div:first-child {
-    flex: 200px 0;
-  }
-
-  > div:last-child {
-    flex: 1;
-    padding: $padding;
-  }
-}
-
-.pager-creator {
-  display: block;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  background-size: cover;
-  background-position: center;
-  // display: flex;
-  // height: 200px;
-  // background-size: cover;
-  // background-position: center;
-  // background-origin: center;
-  // color: white;
-  // -webkit-align-items: center;
 }
 
 .btn-landing {

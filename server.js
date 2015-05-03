@@ -24,10 +24,15 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 
-//- ROUTE
-app.use(function(req, res) {
+//- ROUTES
+app.get('/', function(req, res) {
   res.render('index');
 });
+
+var apiPage = require('./api/page');
+var apiUser = require('./api/user');
+app.use('/api/v1/page', apiPage);
+app.use('/api/v1/user', apiUser);
 
 
 // var server = app.listen(process.env.port, function() {
