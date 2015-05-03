@@ -35,10 +35,12 @@ body {
   .pager-item .pager-image {
     flex: 100px 0px;
     margin-right: 30px; }
-    .pager-item .pager-image > img {
-      width: 100%;
-      height: auto;
+    .pager-item .pager-image > div:first-child {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
+      background-size: cover;
+      background-position: center;
       box-shadow: 0px 0px 15px #e6e6e6; }
   .pager-item .pager-header {
     flex: 1; }
@@ -62,27 +64,40 @@ body {
 .pager-checkmark {
   width: 25px; }
 
-.header {
+.header.app {
   font-weight: 300;
   outline: 0 !important; }
-  .header .navbar-brand {
+  .header.app .navbar-brand {
     font-size: 35px;
     color: #000;
     padding-top: 40px; }
-  .header .navbar-nav {
+  .header.app .navbar-nav {
     display: flex;
     align-items: center;
     font-size: 22px;
     line-height: 22px; }
-  .header .navbar-image {
+  .header.app .navbar-image {
     width: 60px;
     height: 60px;
     border-radius: 50%; }
-  .header .nav > li > a:focus, .header .nav > li > a:hover {
+  .header.app .nav > li > a:focus, .header.app .nav > li > a:hover {
     transition: box-shadow 0.1s ease;
     background-color: transparent; }
-    .header .nav > li > a:focus .navbar-image, .header .nav > li > a:hover .navbar-image {
+    .header.app .nav > li > a:focus .navbar-image, .header.app .nav > li > a:hover .navbar-image {
       box-shadow: 0px 0px 15px #e6e6e6; }
+  .header.app .pager-menu {
+    cursor: pointer;
+    padding-left: 15px; }
+    .header.app .pager-menu.pager-menu-open {
+      background-color: #e6e6e6; }
+      .header.app .pager-menu.pager-menu-open .dropdown-toggle {
+        background-color: inherit; }
+    .header.app .pager-menu .dropdown-menu {
+      min-width: 166px;
+      right: -1px;
+      border: 1px solid #e6e6e6;
+      box-shadow: none;
+      border-radius: 0; }
 
 .pager-landing {
   position: relative;

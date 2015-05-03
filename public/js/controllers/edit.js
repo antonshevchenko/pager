@@ -4,9 +4,8 @@ angular.module('pager')
   // Retrieve page ID
   var pageID = $stateParams.id;
   
-  console.log("pageID: " + pageID);
     function getPageData() {
-	    $facebook.api(pageID).then(       // Replace for a legit ID 
+	    $facebook.api(pageID).then(       
 	      function(response) {        
           console.log(response);
         },
@@ -30,6 +29,4 @@ angular.module('pager')
    $scope.onCheckedImages = function(page) {
     $scope.page.showImages = page.showGallery;
    };
-   
-   
 });
