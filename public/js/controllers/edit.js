@@ -4,13 +4,10 @@ angular.module('pager')
   // Retrieve page ID
   var pageID = $stateParams.id;
 
-  function getPageData() {
-    $facebook.api(pageID)
-      .then(function(response) {
-        $scope.page = response;
-      });
-  }
-
-  // Get page data
-	getPageData();
+  $scope.options = {
+    about: false,
+    blog: false,
+    events: false,
+    gallery: false
+  };
 });

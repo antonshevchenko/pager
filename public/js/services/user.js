@@ -1,13 +1,25 @@
 angular.module('pager')
 
 .factory('User', function(localStorageService) {
+  function setAccessToken(accessToken) {
+    localStorageService.set('user.accessToken', accessToken);
+  }
+
+  function setUserID(userID) {
+    localStorageService.set('user.userID', userID);
+  }
+
+  function setName(name) {
+    localStorageService.set('user.name', name);
+  }
+
   return {
     getAccessToken: function() {
       return localStorageService.get('user.accessToken') || null;
     },
 
     setAccessToken: function(accessToken) {
-      localStorageService.set('user.accessToken', accessToken);
+      setAccessToken(accessToken);
     },
 
     getUserID: function() {
@@ -15,7 +27,7 @@ angular.module('pager')
     },
 
     setUserID: function(userID) {
-      localStorageService.set('user.userID', userID);
+      setUserID(userID);
     },
 
     getName: function() {
@@ -23,7 +35,13 @@ angular.module('pager')
     },
 
     setName: function(name) {
-      localStorageService.set('user.name', name);
+      setName(name);
+    },
+
+    logout: function() {
+      setAccessToken(null);
+      setUserID(null);
+      setName(null);
     },
   };
 });
