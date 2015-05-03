@@ -4,6 +4,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
 
 
    $facebookProvider.setAppId('1429537494015773');
+   $facebookProvider.setPermissions("manage_pages");
   // $locationProvider.html5Mode({
   //   enabled: true,
   //   requireBase: false
@@ -37,8 +38,8 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
       }
     })
 
-    .state('app.pages.edit', {
-      url: '/:id',
+    .state('app.edit', {
+      url: '/pages/:id',
       title: 'Edit Page',
       views: {
         'header': {
