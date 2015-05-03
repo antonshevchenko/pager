@@ -3,7 +3,7 @@ angular.module('pager')
 .controller('PagesCtrl', function($q, $scope, $state, $facebook, User) {
   // Default values
 	$scope.pages = [];
-
+  
   function getPageData(pages) {
     pages.map(function(page) {
       $facebook.api(page.id).then(function(response) {
