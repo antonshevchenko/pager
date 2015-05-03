@@ -16,11 +16,11 @@ Page.set('toJSON', {
   virtuals: true
 });
 
-Pitch.statics.getById = function (id, fields, callback) {
+Page.statics.getById = function (id, fields, callback) {
   this.findById(id, fields).populate('user').exec(callback);
 };
 
-Pitch.statics.getOneAndUpdate = function (id, data, callback) {
+Page.statics.getOneAndUpdate = function (id, data, callback) {
   this.findByIdAndUpdate(id, { $set: data }).populate('user').exec(callback);
 };
 
