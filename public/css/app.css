@@ -204,29 +204,45 @@ body {
     background-color: #3b5998;
     border-color: #3b5998; }
 
-.header.site {
-  font-family: Lato, sans-serif;
-  font-size: 19px;
-  font-weight: 300;
-  text-transform: lowercase; }
-  .header.site a {
-    color: #000; }
-  .header.site .nav > li {
-    padding: 0 10px; }
-  .header.site .nav > li > a {
-    background: none;
-    padding: 15px 5px 10px 5px; }
-    .header.site .nav > li > a:hover {
-      border-bottom: 3px solid #000; }
-
 .site .intro {
   display: flex;
   width: 100%;
   height: 450px;
   -webkit-align-items: center;
-  background-image: url('http://static.pexels.com/wp-content/uploads/2015/04/bricks-fire-escape-fire-ladder-5292-825x550.jpg');
   background-size: cover;
   background-position: center; }
+  .site .intro .lead {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 72px; }
+.site .navbar-nav {
+  float: none;
+  width: 530px;
+  margin: 0 auto; }
+  .site .navbar-nav li a {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 18px; }
+    .site .navbar-nav li a:hover {
+      background-color: transparent; }
+    .site .navbar-nav li a.selected {
+      font-weight: 900; }
+.site .event-highlight {
+  cursor: pointer;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  background-color: #54acf4; }
+  .site .event-highlight > p {
+    margin: 0; }
+.site .photo-post img {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px; }
 
 edit-category-img {
   display: block;

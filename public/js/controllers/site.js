@@ -9,32 +9,40 @@ angular.module('pager')
 
 	$facebook.api($stateParams.id)
 		.then(function(data) {
-			console.log(data);
+			$scope.page = data;
+		});
+})
+
+.controller('SiteHomeCtrl', function($scope, $state, $stateParams, $facebook, Api) {
+	// Get options for site
+	Api.getPage($stateParams.id)
+		.then(function(page) {
+			$scope.options = page.options;
+		});
+
+	// Get general info
+	$facebook.api($stateParams.id)
+		.then(function(data) {
 			$scope.page = data;
 		});
 
+	// Get events
+	$facebook.api($stateParams.id + '/events')
+		.then(function(data) {
+			$scope.events = data;
+		});
 
-	// $scope.site = "The TRAP";
-	//
- // 	$scope.viewSite = function() {
-  //   	$state.go('app.site', { id: $stateParams.id });
-	// };
-	//
- // 	$scope.viewBlog = function() {
-  //   	$state.go('app.siteblog', { id: $stateParams.id });
-	// };
-	//
- // 	$scope.viewEvents = function() {
-  //   	$state.go('app.siteevents', { id: $stateParams.id });
-	// };
-	//
- // 	$scope.viewGallery = function() {
-  //   	$state.go('app.sitegallery', { id: $stateParams.id });
-	// };
-})
+	// Get images
+	$facebook.api('/1438051873176545/photos')
+		.then(function(data) {
+			$scope.photos = data.data;
+		});
 
-.controller('SiteHomeCtrl', function($scope, $state) {
-
+	// Get news
+	$facebook.api($stateParams.id + '/feed')
+		.then(function(data) {
+			$scope.news = data.data;
+		});
 })
 
 .controller('SiteAboutCtrl', function($scope, $state, $stateParams, $facebook) {
@@ -58,7 +66,7 @@ angular.module('pager')
 	getPageData();
 })
 
-.controller('SiteBlogCtrl', function($scope) {
+.controller('SiteNewsCtrl', function($scope) {
 
 	$scope.site = "The TRAP";
 

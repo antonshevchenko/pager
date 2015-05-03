@@ -1,5 +1,43 @@
+<!-- cover -->
 <div class="site">
-  <div class="intro">
+  <div class="intro" ng-style="{ 'background-image': 'url(' + page.cover.source + ')' }">
     <p class="lead">{{page.name}}</p>
+  </div>
+  <!-- content -->
+  <div>
+    <!-- event highlight -->
+    <div class="event-highlight" ng-if="events.data.length">
+      <p class="lead">Today's Event: <cite>{{events.data[0].name}}</cite> at {{events.data[0].start_time | date:'HH:mm'}}</p>
+    </div>
+
+    <!-- navigation -->
+    <nav>
+      <div class="container">
+  			<div class="collapse navbar-collapse">
+  				<ul class="nav navbar-nav">
+            <li><a class="selected">Home</a></li>
+  					<li><a ui-sref="app.site-about" ng-if="options.about">About</a></li>
+  					<li><a ui-sref="app.site-news" ng-if="options.news">News</a></li>
+  					<li><a ui-sref="app.site-events" ng-if="options.events">Events</a></li>
+  					<li><a ui-sref="app.site-gallery" ng-if="options.gallery">Gallery</a></li>
+  				</ul>
+  			</div>
+  		</div>
+    </nav>
+
+    <div class="container">
+      <!-- news -->
+      <!-- <div class="feed-post" ng-repeat="post in news | limitTo: 3">
+        <p class="lead lead-lg">{{post.message}}</p>
+      </div> -->
+
+      <!-- photos -->
+      <div class="photo-post" ng-repeat="photo in photos | limitTo: 6">
+        <p><cite class="lead text-gray">{{photo.created_time | date}}</cite></p>
+        <a ng-href="{{photo.link}}">
+          <img ng-src="{{photo.source}}"/>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

@@ -56,10 +56,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
       url: '/sites/:id',
       params: { id: null },
       views: {
-        'header': {
-          templateUrl: 'public/views/site/header.html',
-          controller: 'SiteHeaderCtrl'
-        },
         'content': {
           templateUrl: 'public/views/site/index.html',
           controller: 'SiteHomeCtrl'
@@ -82,8 +78,8 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
       }
     })
 
-    .state('app.site-blog', {
-      url: '/sites/:id/blog',
+    .state('app.site-news', {
+      url: '/sites/:id/news',
       params: { id: null },
       views: {
         'header': {
@@ -91,8 +87,8 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'Lo
           controller: 'SiteHeaderCtrl'
         },
         'content': {
-          templateUrl: 'public/views/site/blog.html',
-          controller: 'SiteBlogCtrl'
+          templateUrl: 'public/views/site/news.html',
+          controller: 'SiteNewsCtrl'
         },
       }
     })
