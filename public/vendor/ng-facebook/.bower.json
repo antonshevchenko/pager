@@ -1,0 +1,35 @@
+{
+  "name": "ng-facebook",
+  "main": "ngFacebook.js",
+  "version": "0.1.6",
+  "homepage": "https://github.com/GoDisco/ngFacebook",
+  "authors": [
+    "AlmogBaku <almog.baku@gmail.com>"
+  ],
+  "description": "Angular service to handle facebook api",
+  "keywords": [
+    "facebook",
+    "facebook-api",
+    "service",
+    "angularjs",
+    "angular",
+    "ngFacebook",
+    "api",
+    "facebook-sdk",
+    "sdk"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": ">=1.0.0 <2.0.0"
+  },
+  "_release": "0.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.6",
+    "commit": "536f836c28bdc8d3d4f1ced2376f9b8d0256ef8e"
+  },
+  "_source": "git://github.com/GoDisco/ngFacebook.git",
+  "_target": "~0.1.6",
+  "_originalSource": "ng-facebook",
+  "_direct": true
+}

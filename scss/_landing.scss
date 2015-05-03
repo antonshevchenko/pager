@@ -25,7 +25,7 @@
 .pager-landing-browser {
   display: block;
   position: absolute;
-  top: 0;
+  top: -($padding * 4);
 }
 
 .section {

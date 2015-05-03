@@ -15,3 +15,13 @@
   $ gulp
   $ npm start
   ```
+
+3. Tunnel it
+
+	```bash
+	npm install -g localtunnel
+	lt --port 3000 --subdomain pagerapp
+	```
+
+4. Go to https://pagerapp.localtunnel.me
+	

@@ -7,6 +7,6 @@ angular.module('pager')
   ];
 
   $scope.editPage = function(index) {
-
+    
   };
 });

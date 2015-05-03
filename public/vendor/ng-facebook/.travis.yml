@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "0.10"
+
+env:
+  global:
+    - SAUCE_USERNAME=ngFacebook
+    - SAUCE_ACCESS_KEY=da67f9c2-bb80-424b-8879-cac1feae30cd
+
+addons:
+  sauce_connect: true
+
+install:
+  - npm install
+  - npm install protractor cucumber bower -g
+  - npm install lodash
+  - bower install
+
+script:
+  - node test/scripts/web-server.js &
+  - sleep 1 # give the server some time to get his things... drink coffee.. and such
+  - protractor

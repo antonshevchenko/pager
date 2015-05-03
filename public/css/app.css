@@ -104,7 +104,7 @@ body {
 .pager-landing-browser {
   display: block;
   position: absolute;
-  top: 0; }
+  top: -60px; }
 
 .section {
   position: relative;
