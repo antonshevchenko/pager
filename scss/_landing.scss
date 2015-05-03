@@ -1,0 +1,40 @@
+.pager-landing {
+  min-height: 100%;
+  background-image: url('../img/landing.jpg');
+  background-size: cover;
+}
+
+.pager-landing-container {
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+}
+
+.pager-landing-title {
+  width: 100%;
+  text-align: center;
+  color: white;
+
+  h1 {
+    font-weight: 300;
+    font-size: 72px;
+  }
+}
+
+.section {
+  &:nth-child(2n) {
+    background-color: $pager-gray;
+  }
+}
+
+.btn-landing {
+  border-radius: 0;
+  color: black;
+  border-color: black;
+  background-color: transparent;
+
+  &:hover {
+    background-color: inherit;
+    border-color: black;
+  }
+}

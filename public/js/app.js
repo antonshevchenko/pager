@@ -10,21 +10,14 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
   $stateProvider
     .state('app', {
       abstract: true,
-      templateUrl: '/public/views/layout.html'
+      templateUrl: 'public/views/layout.html'
     })
 
-    .state('app.main', {
+    .state('home', {
       url: '/',
-      views: {
-        'header': {
-          templateUrl: '/public/views/header.html',
-          controller: 'HeaderCtrl'
-        },
-        'content': {
-          templateUrl: '/public/views/landing.html',
-          controller: 'LandingCtrl'
-        },
-      }
+      title: 'Home',
+      templateUrl: 'public/views/index.html',
+      controller: 'HomeCtrl'
     })
 
     .state('app.pages', {
@@ -32,11 +25,11 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
       title: 'Pages',
       views: {
         'header': {
-          templateUrl: '/public/views/header.html',
+          templateUrl: 'public/views/header.html',
           controller: 'HeaderCtrl'
         },
         'content': {
-          templateUrl: '/public/views/pages.html',
+          templateUrl: 'public/views/pages.html',
           controller: 'PagesCtrl'
         },
       }
@@ -47,11 +40,11 @@ angular.module('pager', ['ui.router', 'ui.bootstrap'])
       title: 'Edit Page',
       views: {
         'header': {
-          templateUrl: '/public/views/header.html',
+          templateUrl: 'public/views/header.html',
           controller: 'HeaderCtrl'
         },
         'content': {
-          templateUrl: '/public/views/edit.html',
+          templateUrl: 'public/views/edit.html',
           controller: 'EditCtrl'
         },
       }

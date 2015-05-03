@@ -16,27 +16,8 @@ body {
 .text-gray {
   color: gray !important; }
 
-.header {
-  font-weight: 300;
-  outline: 0 !important; }
-  .header .navbar-brand {
-    font-size: 35px;
-    color: #000;
-    padding-top: 40px; }
-  .header .navbar-nav {
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    line-height: 22px; }
-  .header .navbar-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; }
-  .header .nav > li > a:focus, .header .nav > li > a:hover {
-    transition: box-shadow 0.1s ease;
-    background-color: transparent; }
-    .header .nav > li > a:focus .navbar-image, .header .nav > li > a:hover .navbar-image {
-      box-shadow: 0px 0px 15px #e6e6e6; }
+.bg-white {
+  background-color: white; }
 
 .pager-item {
   display: flex;
@@ -75,3 +56,55 @@ body {
 
 .pager-checkmark {
   width: 25px; }
+
+.header {
+  font-weight: 300;
+  outline: 0 !important; }
+  .header .navbar-brand {
+    font-size: 35px;
+    color: #000;
+    padding-top: 40px; }
+  .header .navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 22px; }
+  .header .navbar-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; }
+  .header .nav > li > a:focus, .header .nav > li > a:hover {
+    transition: box-shadow 0.1s ease;
+    background-color: transparent; }
+    .header .nav > li > a:focus .navbar-image, .header .nav > li > a:hover .navbar-image {
+      box-shadow: 0px 0px 15px #e6e6e6; }
+
+.pager-landing {
+  min-height: 100%;
+  background-image: url('../img/landing.jpg');
+  background-size: cover; }
+
+.pager-landing-container {
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center; }
+
+.pager-landing-title {
+  width: 100%;
+  text-align: center;
+  color: white; }
+  .pager-landing-title h1 {
+    font-weight: 300;
+    font-size: 72px; }
+
+.section:nth-child(2n) {
+  background-color: #e6e6e6; }
+
+.btn-landing {
+  border-radius: 0;
+  color: black;
+  border-color: black;
+  background-color: transparent; }
+  .btn-landing:hover {
+    background-color: inherit;
+    border-color: black; }
