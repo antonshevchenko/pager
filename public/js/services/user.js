@@ -13,6 +13,10 @@ angular.module('pager')
     localStorageService.set('user.name', name);
   }
 
+  function setPicture(picture) {
+    localStorageService.set('user.picture', picture);
+  }
+
   return {
     getAccessToken: function() {
       return localStorageService.get('user.accessToken') || null;
@@ -38,10 +42,19 @@ angular.module('pager')
       setName(name);
     },
 
+    getPicture: function() {
+      return localStorageService.get('user.picture') || null;
+    },
+
+    setPicture: function(picture) {
+      setPicture(picture);
+    },
+
     logout: function() {
       setAccessToken(null);
       setUserID(null);
       setName(null);
+      setPicture(null);
     },
   };
 });

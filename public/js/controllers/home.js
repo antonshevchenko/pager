@@ -10,8 +10,12 @@ angular.module('pager')
     $facebook.api('/me').then(function(response) {
       User.setName(response.first_name);
 
-      // Broadcast login event
-      $rootScope.$broadcast('facebook:login');
+      $facebook.api('/me/picture').then(function(res) {
+        User.setPicture(res.data.url);
+
+        // Broadcast login event
+        $rootScope.$broadcast('facebook:login');
+      });
     });
 
     // Go to the pages view

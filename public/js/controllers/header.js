@@ -3,7 +3,7 @@ angular.module('pager')
 .controller('HeaderCtrl', function($rootScope, $scope, $state, $facebook, User) {
   function updateUser() {
     $scope.name = User.getName();
-    $scope.image = 'http://agencedianeriel.com/photo/Ostiguy-Jeanne-nouv09.jpg';
+    $scope.image = User.getPicture();
   }
 
   $scope.openMenu = function(open) {
