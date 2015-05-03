@@ -85,6 +85,19 @@ body {
     background-color: transparent; }
     .header.app .nav > li > a:focus .navbar-image, .header.app .nav > li > a:hover .navbar-image {
       box-shadow: 0px 0px 15px #e6e6e6; }
+  .header.app .pager-menu {
+    cursor: pointer;
+    padding-left: 15px; }
+    .header.app .pager-menu.pager-menu-open {
+      background-color: #e6e6e6; }
+      .header.app .pager-menu.pager-menu-open .dropdown-toggle {
+        background-color: inherit; }
+    .header.app .pager-menu .dropdown-menu {
+      min-width: 166px;
+      right: -1px;
+      border: 1px solid #e6e6e6;
+      box-shadow: none;
+      border-radius: 0; }
 
 .pager-landing {
   position: relative;

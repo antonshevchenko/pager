@@ -30,4 +30,25 @@
 			box-shadow: 0px 0px $padding $pager-gray;
 		}
 	}
+
+	.pager-menu {
+		cursor: pointer;
+		padding-left: $padding;
+
+		&.pager-menu-open {
+			background-color: $pager-gray;
+
+			.dropdown-toggle {
+				background-color: inherit;
+			}
+		}
+
+		.dropdown-menu {
+			min-width: 166px;
+			right: -1px;
+			border: 1px solid $pager-gray;
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
 }

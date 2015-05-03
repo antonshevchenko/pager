@@ -14,13 +14,13 @@
 			</div>
 
 			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right pager-menu" ng-class="{ 'pager-menu-open': isMenuOpen }">
 					{{name}}
-					<li class="dropdown">
-						<a id="menu" class="dropdown-toggle" data-toggle="dropdown" data-target="#" aria-haspopup="true" role="button" aria-expanded="false">
-							<img class="navbar-image" ng-src="{{image}}"><span class="caret"></span>
+					<li class="dropdown" dropdown on-toggle="openMenu(open)">
+						<a id="pagerMenu" class="dropdown-toggle" dropdown-toggle>
+							<img class="navbar-image" ng-src="{{image}}">
 						</a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="menu">
+						<ul class="dropdown-menu">
 							<li><a ui-sref="/">Logout</a></li>
 						</ul>
 					</li>

@@ -6,6 +6,10 @@ angular.module('pager')
     $scope.image = 'http://agencedianeriel.com/photo/Ostiguy-Jeanne-nouv09.jpg';
   }
 
+  $scope.openMenu = function(open) {
+    $scope.isMenuOpen = open;
+  };
+
   // Update user name in header
   $rootScope.$on('facebook:login', function() {
     updateUser();
