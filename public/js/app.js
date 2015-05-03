@@ -1,10 +1,13 @@
-angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
+angular.module('pager', ['ui.router', 'ui.bootstrap', 'LocalStorageModule','ngFacebook'])
 
-.config(function($stateProvider, $urlRouterProvider, $locationProvider, $facebookProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider, $facebookProvider, localStorageServiceProvider) {
+  // Setup Facebook API
+  $facebookProvider.setAppId('1429537494015773');
+  $facebookProvider.setPermissions("manage_pages");
 
+  // Setup local storage
+  localStorageServiceProvider.setPrefix('pager');
 
-   $facebookProvider.setAppId('1429537494015773');
-   $facebookProvider.setPermissions("manage_pages");
   // $locationProvider.html5Mode({
   //   enabled: true,
   //   requireBase: false
@@ -26,7 +29,6 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
     .state('app.pages', {
       url: '/pages',
       title: 'Pages',
-      params: {pageList: null},
       views: {
         'header': {
           templateUrl: 'public/views/header.html',
@@ -42,6 +44,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
     .state('app.edit', {
       url: '/pages/:id',
       title: 'Edit Page',
+      params: { id: null },
       views: {
         'header': {
           templateUrl: 'public/views/header.html',
@@ -72,7 +75,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
   $urlRouterProvider.otherwise('/');
 })
 
-.run( function( $rootScope ) {
+.run(function($rootScope) {
   // Load the facebook SDK asynchronously
   (function(){
      // If we've already installed the SDK, we're done
@@ -82,7 +85,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
      var firstScriptElement = document.getElementsByTagName('script')[0];
 
      // Create a new script element and set its id
-     var facebookJS = document.createElement('script'); 
+     var facebookJS = document.createElement('script');
      facebookJS.id = 'facebook-jssdk';
 
      // Set the new script's source to the source of the Facebook JS SDK

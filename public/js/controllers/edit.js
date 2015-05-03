@@ -1,9 +1,16 @@
 angular.module('pager')
 
-.controller('EditCtrl', function($scope, $stateParams) {
+.controller('EditCtrl', function($scope, $stateParams, $facebook) {
+  // Retrieve page ID
+  var pageID = $stateParams.id;
 
-  var swag = $stateParams.id;
-  console.log(swag);
+  function getPageData() {
+    $facebook.api(pageID)
+      .then(function(response) {
+        $scope.page = response;
+      });
+  }
 
-  $scope.page = {"field1":123, "field2":456, "field3":789, "field4":10};
+  // Get page data
+	getPageData();
 });
