@@ -1,9 +1,10 @@
 angular.module('pager')
 
-.controller('EditCtrl', function($scope, $state, $stateParams, $facebook, User, Api) {
+.controller('EditCtrl', function($scope, $state, $stateParams, $timeout, $facebook, User, Api) {
   // Retrieve page ID
   var pageID = $stateParams.id;
 
+  $scope.state = 'Save';
   $scope.options = {
     about: false,
     blog: false,
@@ -26,9 +27,12 @@ angular.module('pager')
       options: $scope.options
     };
     Api.savePage(params)
-      .then(function(data) {
-        console.log(data);
-        alert('Saved!');
+      .then(function() {
+        $scope.state = 'Saved';
+
+        $timeout(function() {
+          $scope.state = 'Save';
+        }, 1000);
       });
   };
 

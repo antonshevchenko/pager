@@ -269,3 +269,6 @@ edit-category-img {
     color: #54acf4;
     background-color: white;
     border: 1px solid; }
+  .btn-pager.btn-pager-success {
+    background-color: #33cd5f;
+    border-color: #28a54c; }

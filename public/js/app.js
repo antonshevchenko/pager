@@ -1,4 +1,4 @@
-angular.module('pager', ['ui.router', 'ui.bootstrap', 'LocalStorageModule','ngFacebook'])
+angular.module('pager', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'LocalStorageModule', , 'ngAnimate', 'ngFacebook'])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $facebookProvider, localStorageServiceProvider) {
   // Setup Facebook API
