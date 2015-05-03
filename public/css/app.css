@@ -190,3 +190,18 @@ body {
     color: white;
     background-color: #3b5998;
     border-color: #3b5998; }
+
+.header.site {
+  font-family: Lato, sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  text-transform: lowercase; }
+  .header.site a {
+    color: #000; }
+  .header.site .nav > li {
+    padding: 0 10px; }
+  .header.site .nav > li > a {
+    background: none;
+    padding: 15px 5px 10px 5px; }
+    .header.site .nav > li > a:hover {
+      border-bottom: 3px solid #000; }
