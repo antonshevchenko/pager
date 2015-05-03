@@ -1,6 +1,6 @@
 angular.module('pager')
 
-.controller('EditCtrl', function($scope, $stateParams, $facebook) {
+.controller('EditCtrl', function($scope, $state, $stateParams, $facebook) {
   // Retrieve page ID
   var pageID = $stateParams.id;
 
@@ -13,6 +13,10 @@ angular.module('pager')
 
   $scope.changeOption = function(option) {
     $scope.options[option] = !$scope.options[option];
+  };
+
+  $scope.viewPage = function() {
+    $state.go('app.site', { id: pageID });
   };
 
   // $scope.updateCategories = function(page) {
