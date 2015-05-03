@@ -25,11 +25,13 @@ body {
 .pager-item {
   display: flex;
   padding: 15px;
-  margin-bottom: 30px;
   border: 1px solid #e6e6e6;
+  border-bottom: 0;
   -webkit-align-items: center;
   cursor: pointer;
   transition: box-shadow 0.1s ease; }
+  .pager-item:last-of-type {
+    border-bottom: 1px solid #e6e6e6; }
   .pager-item .pager-image {
     flex: 100px 0px;
     margin-right: 30px; }
@@ -84,22 +86,25 @@ body {
 
 .pager-landing {
   position: relative;
-  min-height: 100%;
+  height: 450px;
   background-image: url('../img/landing.jpg');
-  background-size: cover; }
+  background-size: cover;
+  background-position: bottom; }
 
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: flex-start; }
+  -webkit-align-items: center; }
 
 .pager-landing-title {
   width: 100%;
   text-align: center;
   color: white; }
   .pager-landing-title h1 {
-    font-weight: 300;
-    font-size: 72px; }
+    font-weight: 900;
+    font-size: 72px;
+    text-transformation: uppercase;
+    letter-spacing: 3px; }
 
 .pager-landing-browser {
   display: block;
@@ -127,24 +132,45 @@ body {
 .section-text {
   margin: 30px 0; }
 
-.section-creator div.creator {
-  display: flex;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-origin: center;
+.section-col-divided .col-md-4 {
+  border-right: 1px solid #e6e6e6; }
+  .section-col-divided .col-md-4:last-of-type {
+    border-right: 0; }
+
+.section-creator {
   color: white;
+  background-color: #333 !important; }
+  .section-creator.section {
+    padding: 30px 0; }
+
+.pager-testimonial {
+  display: flex;
+  color: #333;
+  background-color: white;
+  border-radius: 100px;
+  border-left: 0;
   -webkit-align-items: center; }
-.section-creator.section {
-  padding: 30px 0;
-  padding-bottom: 0; }
+  .pager-testimonial > div:first-child {
+    flex: 200px 0; }
+  .pager-testimonial > div:last-child {
+    flex: 1;
+    padding: 15px; }
+
+.pager-creator {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-size: cover;
+  background-position: center; }
 
 .btn-landing {
   border-radius: 0;
   color: white;
   border-color: #3b5998;
   background-color: #3b5998;
-  outline: 0 !important; }
+  outline: 0 !important;
+  margin-top: 30px; }
   .btn-landing:hover, .btn-landing:focus, .btn-landing:active {
     color: white;
     background-color: #3b5998;

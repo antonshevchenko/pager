@@ -1,14 +1,15 @@
 .pager-landing {
   position: relative;
-  min-height: 100%;
+  height: 450px;
   background-image: url('../img/landing.jpg');
   background-size: cover;
+  background-position: bottom;
 }
 
 .pager-landing-container {
   display: flex;
   height: 100%;
-  -webkit-align-items: flex-start;
+  -webkit-align-items: center;
 }
 
 .pager-landing-title {
@@ -17,8 +18,10 @@
   color: white;
 
   h1 {
-    font-weight: 300;
+    font-weight: 900;
     font-size: 72px;
+    text-transformation: uppercase;
+    letter-spacing: 3px;
   }
 }
 
@@ -59,21 +62,57 @@
   margin: $padding * 2 0;
 }
 
-.section-creator {
-  div.creator {
-    display: flex;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-origin: center;
-    color: white;
-    -webkit-align-items: center;
+.section-col-divided {
+  .col-md-4 {
+    border-right: 1px solid $pager-gray;
+
+    &:last-of-type {
+      border-right: 0;
+    }
   }
+}
+
+.section-creator {
+  color: white;
+  background-color: #333 !important;
 
   &.section {
     padding: $padding * 2 0;
-    padding-bottom: 0;
   }
+}
+
+.pager-testimonial {
+  display: flex;
+  color: #333;
+  background-color: white;
+  border-radius: 100px;
+  border-left: 0;
+  -webkit-align-items: center;
+
+  > div:first-child {
+    flex: 200px 0;
+  }
+
+  > div:last-child {
+    flex: 1;
+    padding: $padding;
+  }
+}
+
+.pager-creator {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-size: cover;
+  background-position: center;
+  // display: flex;
+  // height: 200px;
+  // background-size: cover;
+  // background-position: center;
+  // background-origin: center;
+  // color: white;
+  // -webkit-align-items: center;
 }
 
 .btn-landing {
@@ -82,6 +121,7 @@
   border-color: #3b5998;
   background-color: #3b5998;
   outline: 0 !important;
+  margin-top: $padding * 2;
 
   &:hover,
   &:focus,

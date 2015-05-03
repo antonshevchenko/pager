@@ -26,6 +26,7 @@ angular.module('pager', ['ui.router', 'ui.bootstrap', 'ngFacebook'])
     .state('app.pages', {
       url: '/pages',
       title: 'Pages',
+      params: {pageList: null},
       views: {
         'header': {
           templateUrl: 'public/views/header.html',
