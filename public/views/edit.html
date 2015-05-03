@@ -1,5 +1,5 @@
 <div class="container" ng-controller="EditCtrl">
-	<div class="row">
+<!--	<div class="row">
 		<div class="col-md-4">
 			<h3>About</h3> <i class="fa fa-bookmark-o"></i>
 			Display general information
@@ -30,7 +30,29 @@
 		<div class="col-md-2">
 			<h3><input type="checkbox" ng-model="page.gallery"> </input></h3>
 		</div>
+	</div>-->
+	
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<h3>About</h3> <img class="edit-category-img" src="public/img/about.jpg">
+			<p class="lead">Display general information</p>
+		</div>
+		<div class="col-md-6 text-center">
+			<h3>News</h3> <img class="edit-category-img" src="public/img/blog.jpg">
+			<p class="lead">Display posts and recent activity</p>
+		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<h3>Events</h3> <img class="edit-category-img" src="public/img/concert.jpg">
+			<p class="lead">Display upcoming events</p>
+		</div>
+		<div class="col-md-6 text-center">
+			<h3>Gallery</h3> <img class="edit-category-img" src="public/img/gallery.jpg">
+			<p class="lead">Display images</p>
+		</div>
+	</div>
+	
 
 	<button type="button" class="btn btn-lg btn-update" ng-click="updateCategories(page)">
 		<i class="fa fa-refresh"></i> Update
