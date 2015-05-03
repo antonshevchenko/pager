@@ -16,7 +16,7 @@ router.get('/:id', function(req, res) {
 
 router.post('/', function(req, res) {
   var data = {
-    id: req.body.id,
+    pageID: req.body.id,
     user: req.body.user
   };
   var page = new Page(data);
