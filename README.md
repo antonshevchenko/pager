@@ -1,27 +1,5 @@
-# pager
+# Pager
 
-## Setup
+__Pager is coming soon to the World Wide Web.__
 
-1. Install dependencies:
-
-  ```bash
-  $ npm install
-  $ bower install
-  ```
-
-2. Run the app
-
-  ```bash
-  $ gulp
-  $ npm start
-  ```
-
-3. Tunnel it
-
-	```bash
-	npm install -g localtunnel
-	lt --port 3000 --subdomain pagerapp
-	```
-
-4. Go to https://pagerapp.localtunnel.me
-	
+In the meantime, you can browser through our original source code for our winning project, as submitted to [TechCrunch Disrupt NY 2015 Hackathon's ChallengePost](http://challengepost.com/software/pager).
