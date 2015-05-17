@@ -1,0 +1,10 @@
+.pgr-button {
+  @include pgr-button;
+  text-transform: uppercase;
+  letter-spacing: rem-calc(2);
+
+  // Fix for Foundation's input[type="submit"] border-radius: 0px;
+  form & {
+    @include pgr-button;
+  }
+}

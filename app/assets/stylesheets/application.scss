@@ -10,6 +10,29 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+// Import Foundation
+@import "foundation_and_overrides";
+
+// Import Bourbon
+@import "bourbon";
+
+// Import Font Awesome
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Import shared styles
+@import "shared/variables";
+@import "shared/mixins";
+@import "shared/text";
+@import "shared/buttons";
+@import "shared/inputs";
+@import "shared/sections";
+@import "shared/images";
+
+// Import page styles
+@import "landing";
+
+

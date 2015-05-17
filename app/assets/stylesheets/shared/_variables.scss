@@ -1,0 +1,17 @@
+// Text
+$font-weight-bolder: 900;
+$font-weight-light: 300;
+$font-size-large: rem-calc(24);
+$font-size-lead: rem-calc(20);
+
+// Icons
+$icon-size-large: rem-calc(172);
+
+// Colors
+$primary-color: #3B5998;
+
+// Buttons
+$button-font-weight: $font-weight-light;
+$button-bg-color: $primary-color;
+$button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
+$button-font-med: rem-calc(14);

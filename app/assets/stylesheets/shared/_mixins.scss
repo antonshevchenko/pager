@@ -1,0 +1,19 @@
+@mixin text($size) {
+  font-size: $size;
+  line-height: $size * 1.3;
+}
+
+@mixin pgr-button($color: $button-font-color, $background-color: $button-bg-color, $background-hover-color: $button-bg-hover) {
+  @include button-base;
+  @include button-size;
+  @include button-style($background-color, true);
+
+  position: relative;
+  border-bottom: rem-calc(3) solid $background-hover-color;
+  outline: 0;
+
+  &:active {
+    margin-top: rem-calc(3);
+    border-bottom-width: 0;
+  }
+}
