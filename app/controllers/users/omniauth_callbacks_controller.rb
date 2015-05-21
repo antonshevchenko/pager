@@ -9,4 +9,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+
+protected
+  def after_sign_in_path_for(resource)
+    users_pages_path
+  end
 end
