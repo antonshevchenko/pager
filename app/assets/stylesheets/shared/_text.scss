@@ -2,11 +2,11 @@
 
 h1, h2, h3, h4, h5, h6, p {
   color: inherit;
-  font-size: inherit;
   line-height: inherit;
 }
 
 p {
+  font-size: inherit;
   font-weight: $font-weight-light;
 
   &.lead {

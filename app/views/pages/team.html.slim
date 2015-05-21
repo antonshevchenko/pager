@@ -1,0 +1,28 @@
+.team
+  .section-team
+    .section-team-content
+      .section
+        .item
+          h1 Meet the Team
+          p Pager was created during TechCrunch's Disrupt Hackathon NY 2015 as a way to bring more businesses on the web while removing the hassle of developing, maintaining and hosting a website.
+          p We were featured on TechCrunch and became one of the winning projects.
+          = link_to "View TechCrunch Article", "http://techcrunch.com/2015/05/03/pager-turns-your-facebook-pages-into-full-fledged-websites/", class: "pgr-button-success"
+  .section
+    .item
+      ul.team-members
+        li.team-member
+          = image_tag "anton.jpg"
+          p Anton Shevchenko
+        li.team-member
+          = image_tag "alex.jpg"
+          p Alexandru Ilea
+        li.team-member
+          = image_tag "darrel.jpg"
+          p Darrel-Day Guerrero
+        li.team-member
+          = image_tag "andrew.jpg"
+          p Andrew McEwen
+
+  .text-center
+    p We're always looking for fresh talent!
+    = link_to "Join Our Team", "mailto:hello@usepager.co", class: "pgr-button"

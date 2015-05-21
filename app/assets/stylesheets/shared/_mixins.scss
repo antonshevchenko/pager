@@ -3,17 +3,43 @@
   line-height: $size * 1.3;
 }
 
-@mixin pgr-button($color: $button-font-color, $background-color: $button-bg-color, $background-hover-color: $button-bg-hover) {
+@mixin pgr-button($color: $button-font-color, $background-color: $button-bg-color) {
   @include button-base;
   @include button-size;
   @include button-style($background-color, true);
 
   position: relative;
-  border-bottom: rem-calc(3) solid $background-hover-color;
+  border: rem-calc(1) solid $background-color;
+  border-bottom: rem-calc(3) solid scale-color($background-color, $lightness: $button-function-factor);
+  color: $color;
   outline: 0;
+
+  &:hover {
+    border-color: scale-color($background-color, $lightness: $button-function-factor);
+  }
 
   &:active {
     margin-top: rem-calc(3);
     border-bottom-width: 0;
+  }
+}
+
+@mixin pgr-button-outline($color: $jet, $background-color: $button-bg-color) {
+  &.pgr-button-outline {
+    @include button-base;
+    @include button-size;
+    @include button-style(transparent, true);
+
+    color: $color;
+    border: rem-calc(1) solid $background-color;
+
+    &:hover {
+      color: $white;
+      background-color: $background-color;
+    }
+
+    &:active {
+      border-bottom-width: rem-calc(1);
+    }
   }
 }

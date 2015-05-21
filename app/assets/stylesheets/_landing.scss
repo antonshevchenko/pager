@@ -1,4 +1,4 @@
-.landing {
+body > .landing {
   > .header {
     @extend .text-center;
     @include background(image-url('landing.jpg') bottom left no-repeat);

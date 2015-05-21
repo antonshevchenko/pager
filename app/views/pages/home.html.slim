@@ -2,7 +2,7 @@
   .header
     h1 Pager
     p.lead Facebook Pages meets the web
-    = button_to "Login with Facebook", "", class: "pgr-button"
+    = button_to "Login with Facebook", user_omniauth_authorize_path(:facebook), class: "pgr-button"
   .section-relative
     .section
       .item
