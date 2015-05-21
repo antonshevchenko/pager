@@ -1,0 +1,35 @@
+body > .team {
+  .section-team {
+    @include background(image-url('team.jpg') center no-repeat);
+
+    background-size: cover;
+    padding: $column-gutter * 5 0;
+
+    h1 {
+      color: $success-color;
+    }
+
+    > .section-team-content {
+      background-color: $white;
+    }
+  }
+
+  p {
+    @extend .lead;
+  }
+
+  .team-members {
+    @include block-grid(4);
+  }
+
+  .team-member {
+    @extend .text-center;
+
+    > img {
+      width: rem-calc(200);
+      height: rem-calc(200);
+      margin-bottom: $column-gutter / 2;
+      border-radius: $global-radius;
+    }
+  }
+}

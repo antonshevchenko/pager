@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    = render partial: "layouts/head"
+  body
+    = render partial: "layouts/header"
+    = yield
+    = render partial: "layouts/footer"
+    = yield :scripts

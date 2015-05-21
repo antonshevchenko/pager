@@ -1,0 +1,30 @@
+.section {
+  @include grid-row;
+  
+  display: flex;
+  padding: $column-gutter / 2 0;
+  overflow: hidden;
+}
+
+.section > .item {
+  @include flex(1);
+
+  padding: $column-gutter / 2;
+}
+
+.section > .item > .header {
+  @include text($font-size-large);
+
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: $column-gutter / 2;
+
+  > p {
+    margin-bottom: $column-gutter / 3;
+  }
+
+  > i {
+    margin-right: $column-gutter * 2;
+    font-size: $icon-size-large;
+  }
+}

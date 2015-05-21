@@ -1,0 +1,56 @@
+body > .landing {
+  > .header {
+    @extend .text-center;
+    @include background(image-url('landing.jpg') bottom left no-repeat);
+
+    background-size: cover;
+    padding: rem-calc(100) rem-calc(20);
+    color: $white;
+
+    > h1 {
+      margin: 0;
+      font-size: rem-calc(72);
+      font-weight: $font-weight-bolder;
+    }
+  }
+
+  .section {
+    height: rem-calc(400);
+    align-items: center;
+
+    .image-highlight {
+      position: absolute;
+      top: 0;
+      height: rem-calc(400);
+    }
+  }
+
+  .section-landing {
+    @include background(image-url('road.jpg') center center no-repeat);
+
+    background-size: cover;
+
+    i {
+      font-size: $icon-size-large;
+    }
+
+    p {
+      font-weight: $font-weight-normal;
+    }
+
+    .item {
+      @extend .text-center;
+
+      color: $white;
+    }
+  }
+
+  .section-relative {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fa-facebook-official {
+    color: $primary-color;
+  }
+}

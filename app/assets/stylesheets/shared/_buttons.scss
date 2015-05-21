@@ -1,0 +1,24 @@
+.pgr-button {
+  @include pgr-button;
+  @include pgr-button-outline($primary-color, $primary-color);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(2);
+
+  // Fix for Foundation's input[type="submit"] border-radius: 0px;
+  form & {
+    @include pgr-button;
+  }
+}
+
+.pgr-button-success {
+  @extend .pgr-button;
+  @include pgr-button($white, $success-color);
+  @include pgr-button-outline($success-color, $success-color);
+}
+
+.pgr-button-default {
+  @extend .pgr-button;
+  @include pgr-button($jet, $white);
+
+  border-color: scale-color($white, $lightness: $button-function-factor);
+}
